@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+<html lang="{{ tolgee_lang }}">
+	<head>
+		<title>Die Kanzlei</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="author" content="Susana Oder-Pena" />
+		<meta name="robots" content="index, follow" />
+
+		<link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='assets/images/apple-touch-icon.png') }}" />
+		<link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='assets/favicon_susana/favicon-32x32.png' )}}" />
+		<link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='assets/favicon_susana/favicon-16x16.png') }}"/>
+		<link rel="manifest" href="{{ url_for( 'static', filename='assets/json/site.webmanifest' )}}" />
+
+		<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}" />
+		<noscript><link rel="stylesheet" href="{{ url_for('static', filename='assets/css/noscript.css') }}" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Massively</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="{{url_for('home')}}">Startseite</a></li>
+							<li class="active"><a href="">Die Kanzlei</a></li>
+							<li><a href="{{url_for('services')}}">Dienstleistungen</a></li>
+							<li><a href="{{ url_for('about_me')}}">über mich</a></li>
+							<li><a href="{{ url_for('impresum')}}">Impressum</a></li>
+							<li><a href="{{ url_for('politic_privacy')}}">Datenschutzklärung</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<h1>Unsere<br />
+									Kanzlei</h1>
+								</header>
+
+								<a href="" class="image main"><img src="{{ url_for('static', filename='images/firma.jpeg') }}" alt="" /></a>
+
+								<!-- Text stuff -->
+									<article class="post featured">
+										<p style="color: black;">ist im Herzen Heidelberg gelegen. Wir vertreten Privatpersonen und Unternehmen in
+											Deutschland, Spanien und Kolumbien. Wir verfügen über die Zulassung in Deutschland, Spanien und
+											Kolumbien und können daher unsere Mandanten auch in diesen Ländern jeweils gerichtlich vertreten.
+											Darüber hinaus kooperieren wir mit Rechtanwälten, Steuerberatern und Wirtschaftsprüfern, um für
+											unsere Mandanten in jedem einzelnen Fall eine bestmögliche Beratung und Vertretung zu gewährleisten.
+											Korrespondenzsprachen: Deutsch und Spanisch</p>
+									</article>
+									<hr />
+									<h3>Vergütung</h3>
+									<p style="color: black;"><span class="image left"><img src="{{ url_for('static', filename='images/payment.jpg') }}" alt="" /></span>
+										Die Abrechnung des Honorars erfolgt über das Rechtsanwaltsvergütungsgesetz (RVG) oder individuell auf
+										Basis einer Honorarvereinbarung, welche sich grundsätzlich nach dem Zeitaufwand oder Stundensatz richtet.
+										Bei überschaubaren Fällen ist auch eine Pauschalvergütung möglich. Dadurch kann Ihrer finanziellen Situation
+										Rechnung getragen werden. Wir übernehmen für Sie gerne die Beantragung der Kostenübernahme durch Ihre
+										Rechtsschutzversicherung. Wir helfen Ihnen gerne bei der Beantragung von Prozesskostenhilfe, die Ihnen unter
+										bestimmten Voraussetzungen zustehen kann.</p>
+
+										<ul class="actions special">
+											<li><a href="{{ url_for_lang('home')}}#contact" class="button large">Kontak</a></li>
+										</ul>					
+					</div>
+				<!-- Footer -->
+					<footer id="footer">
+							<section>
+								<h3>Social</h3>
+								<ul class="icons alt">
+									<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</section>
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>Dr. Maria Susana Oder-Peña </li></ul>
+						<ul><li>Steuernummer-ID DE248517308</li></ul>
+						<ul><li>&copy; {{ current_year }} Kanzlei Dr. Susana Peña</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+						<ul><li>Photographer Inci Bosnak</li><li>Logo Design by JJO</li></ul>	
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="https://cdn.jsdelivr.net/npm/@tolgee/web/dist/tolgee-web.umd.min.js"></script>
+			<script>
+			// Inyectamos la config desde Flask al frontend
+			window.tolgeeConfig = {
+				apiKey: "{{ tolgee_api_key }}",
+				apiUrl: "{{ tolgee_api_url }}",
+				language: "{{ tolgee_lang }}"
+			};
+			</script>
+		<!-- Scripts -->
+		 	<script src="{{ url_for_lang('static', filename='assets/js/tolgee-init.js') }}"></script>
+			<script src="{{ url_for('static', filename='assets/js/jquery.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='assets/js/jquery.scrollex.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='assets/js/jquery.scrolly.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='assets/js/browser.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='assets/js/breakpoints.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='assets/js/util.js') }}"></script>
+			<script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
+
+	</body>
+</html>

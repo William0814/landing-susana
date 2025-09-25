@@ -1,50 +1,60 @@
 <!DOCTYPE HTML>
-<!--
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
+<html lang="{{ tolgee_lang }}">
 	<head>
-		<title>Massively by HTML5 UP</title>
+		<title>Dr. Susana Peña</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<meta name="author" content="Susana Oder-Pena" />
+		<meta name="robots" content="index, follow" />
+
+		<link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='assets/images/apple-touch-icon.png') }}" />
+		<link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='assets/favicon_susana/favicon-32x32.png' )}}" />
+		<link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='assets/favicon_susana/favicon-16x16.png') }}"/>
+		<link rel="manifest" href="{{ url_for( 'static', filename='assets/json/site.webmanifest' )}}" />
+
+		<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}" />
+		<noscript><link rel="stylesheet" href="{{ url_for('static', filename='assets/css/noscript.css') }}" /></noscript>
 	</head>
 	<body class="is-preload">
 
 		<!-- Wrapper -->
 			<div id="wrapper" class="fade-in">
-
+				<!-- Language Selector -->
+				 <div class="row">
+					<div class="col-1.5 col-1-small">
+						<select name="demo-category" id="demo-category">
+							<option value="es-CO">Español</option>
+							<option value="de-DE">Deutsch</option>
+							<option value="en-US">English</option>
+						</select>
+					</div>
+				</div>
+				
 				<!-- Intro -->
 					<div id="intro">
-						<h1>This is<br />
-						Massively</h1>
-						<p>A free, fully responsive HTML5 + CSS3 site template designed by <a href="https://twitter.com/ajlkn">@ajlkn</a> for <a href="https://html5up.net">HTML5 UP</a><br />
-						and released for free under the <a href="https://html5up.net/license">Creative Commons license</a>.</p>
+						<h1>Kanzlei<br />
+						Dr. Susana Peña</h1>
+						<p data-i18n="lema-home">Wir vertreten Ihre Interessen in Deutschland, Spanien und Kolumbien</p>
 						<ul class="actions">
-							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
+							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly"></a></li>
 						</ul>
 					</div>
 
 				<!-- Header -->
-					<header id="header">
-						<a href="index.html" class="logo">Massively</a>
+					<header id="header" class=>
+						<a href="{{url_for('home')}}" class="logo"><img src="{{ url_for('static', filename='images/logo.png') }}"></a>
+
 					</header>
 
 				<!-- Nav -->
 					<nav id="nav">
 						<ul class="links">
-							<li class="active"><a href="index.html">This is Massively</a></li>
-							<li><a href="generic.html">Generic Page</a></li>
-							<li><a href="elements.html">Elements Reference</a></li>
-						</ul>
-						<ul class="icons">
-							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+							<li class="active"><a href="">Startseite</a></li>
+							<li><a href="{{url_for('firma')}}">Die Kanzlei</a></li>
+							<li><a href="{{url_for('services')}}">Dienstleistungen</a></li>
+							<li><a href="{{ url_for('about_me')}}">über mich</a></li>
+							<li><a href="{{ url_for('impresum')}}">Impressum</a></li>
+							<li><a href="{{ url_for('politic_privacy')}}">Datenschutzklärung</a></li>
 						</ul>
 					</nav>
 
@@ -54,115 +64,31 @@
 						<!-- Featured Post -->
 							<article class="post featured">
 								<header class="major">
-									<span class="date">April 25, 2017</span>
-									<h2><a href="#">And this is a<br />
-									massive headline</a></h2>
-									<p>Aenean ornare velit lacus varius enim ullamcorper proin aliquam<br />
-									facilisis ante sed etiam magna interdum congue. Lorem ipsum dolor<br />
-									amet nullam sed etiam veroeros.</p>
+									<h2><a href="#">WILLKOMMEN<br />
+									</a></h2>
+									<p><b>auf den Seiten der Kanzlei
+										Dr. Susana Peña
+										<a href="https://maps.app.goo.gl/RXkbSbY74AHCimdq7" target="_blank">Häusserstraße 6a
+										69115 Heidelberg</a></p><br>
+									<p>Wir bieten Betreuung und Abwicklung grenzüberschreitender Mandate an, insbesondere in
+										den Bereichen des FAMILIENRECHTS, nämlich Scheidung, Unterhalt, Sorgerecht, Eheverträge,
+										sowie des IMMOBILIENRECHTS, nämlich Grundstücksverträge, Eigentumsrecht und des
+										 AUSLÄNDERRECHTS nämlich Visum, Aufenthalts- und Niederlassungserlaubnis, Staatsangehörigkeit. <br>
+										Auf den folgenden Seiten finden Sie weitere Informationen. Nehmen Sie gleich hier direkt  <a href="#footer">Kontakt</a> mit uns auf.</b></p>
 								</header>
-								<a href="#" class="image main"><img src="images/pic01.jpg" alt="" /></a>
+								<a href="#" class="image main"><img src="{{ url_for('static', filename='images/susana.png') }}" alt="" /></a>
 								<ul class="actions special">
-									<li><a href="#" class="button large">Full Story</a></li>
+									<li><a href="#contact" class="button large">Kontak</a></li>
 								</ul>
 							</article>
 
 						<!-- Posts -->
-							<section class="posts">
-								<article>
-									<header>
-										<span class="date">April 24, 2017</span>
-										<h2><a href="#">Sed magna<br />
-										ipsum faucibus</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/pic02.jpg" alt="" /></a>
-									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
-									<ul class="actions special">
-										<li><a href="#" class="button">Full Story</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<span class="date">April 22, 2017</span>
-										<h2><a href="#">Primis eget<br />
-										imperdiet lorem</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/pic03.jpg" alt="" /></a>
-									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
-									<ul class="actions special">
-										<li><a href="#" class="button">Full Story</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<span class="date">April 18, 2017</span>
-										<h2><a href="#">Ante mattis<br />
-										interdum dolor</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/pic04.jpg" alt="" /></a>
-									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
-									<ul class="actions special">
-										<li><a href="#" class="button">Full Story</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<span class="date">April 14, 2017</span>
-										<h2><a href="#">Tempus sed<br />
-										nulla imperdiet</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/pic05.jpg" alt="" /></a>
-									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
-									<ul class="actions special">
-										<li><a href="#" class="button">Full Story</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<span class="date">April 11, 2017</span>
-										<h2><a href="#">Odio magna<br />
-										sed consectetur</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/pic06.jpg" alt="" /></a>
-									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
-									<ul class="actions special">
-										<li><a href="#" class="button">Full Story</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<span class="date">April 7, 2017</span>
-										<h2><a href="#">Augue lorem<br />
-										primis vestibulum</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/pic07.jpg" alt="" /></a>
-									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
-									<ul class="actions special">
-										<li><a href="#" class="button">Full Story</a></li>
-									</ul>
-								</article>
-							</section>
-
-						<!-- Footer -->
-							<footer>
-								<div class="pagination">
-									<!--<a href="#" class="previous">Prev</a>-->
-									<a href="#" class="page active">1</a>
-									<a href="#" class="page">2</a>
-									<a href="#" class="page">3</a>
-									<span class="extra">&hellip;</span>
-									<a href="#" class="page">8</a>
-									<a href="#" class="page">9</a>
-									<a href="#" class="page">10</a>
-									<a href="#" class="next">Next</a>
-								</div>
-							</footer>
-
+							
 					</div>
 
 				<!-- Footer -->
 					<footer id="footer">
-						<section>
+						<section id="contact">
 							<form method="post" action="#">
 								<div class="fields">
 									<div class="field">
@@ -170,7 +96,7 @@
 										<input type="text" name="name" id="name" />
 									</div>
 									<div class="field">
-										<label for="email">Email</label>
+										<label for="email">E-mail</label>
 										<input type="text" name="email" id="email" />
 									</div>
 									<div class="field">
@@ -185,17 +111,20 @@
 						</section>
 						<section class="split contact">
 							<section class="alt">
-								<h3>Address</h3>
-								<p>1234 Somewhere Road #87257<br />
-								Nashville, TN 00000-0000</p>
+								<h3>Addresse</h3>
+								<p><a href="https://maps.app.goo.gl/RXkbSbY74AHCimdq7" target="_blank">Häusserstraße 6a
+									69115 Heidelberg</a>
+								</p>
 							</section>
-							<section>
+							<section class="alt">
 								<h3>Phone</h3>
-								<p><a href="#">(000) 000-0000</a></p>
+								<p><a href="#">+49 (0) 6221 4337204</a></p>
+								<h3>Fax</h3>
+								<p><a href="#">+49 (0) 6221 4337205</a></p>
 							</section>
 							<section>
 								<h3>Email</h3>
-								<p><a href="#">info@untitled.tld</a></p>
+								<p><a href="mailto:info@pena-abogados.com">info@pena-abogados.com</a></p>
 							</section>
 							<section>
 								<h3>Social</h3>
@@ -211,19 +140,33 @@
 
 				<!-- Copyright -->
 					<div id="copyright">
-						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+						<ul><li>Dr. Maria Susana Oder-Peña </li></ul>
+						<ul><li>Steuernummer-ID DE248517308</li></ul>
+						<ul><li>&copy; {{ current_year }} Kanzlei Dr. Susana Peña</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+						<ul><li>Photographer Inci Bosnak</li><li>Logo Design by JJO</li></ul>	
 					</div>
 
 			</div>
 
+			<!-- Scripts -->
+			<script src="https://cdn.jsdelivr.net/npm/@tolgee/web/dist/tolgee-web.umd.min.js"></script>
+			<script>
+			// Inyectamos la config desde Flask al frontend
+			window.tolgeeConfig = {
+				apiKey: "{{ tolgee_api_key }}",
+				apiUrl: "{{ tolgee_api_url }}",
+				language: "{{ tolgee_lang }}"
+			};
+			</script>
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+		 	<script src="{{ url_for_lang('static', filename='assets/js/tolgee-init.js') }}"></script>
+			<script src="{{ url_for_lang('static', filename='assets/js/jquery.min.js') }}"></script>
+			<script src="{{ url_for_lang('static', filename='assets/js/jquery.scrollex.min.js') }}"></script>
+			<script src="{{ url_for_lang('static', filename='assets/js/jquery.scrolly.min.js') }}"></script>
+			<script src="{{ url_for_lang('static', filename='assets/js/browser.min.js') }}"></script>
+			<script src="{{ url_for_lang('static', filename='assets/js/breakpoints.min.js') }}"></script>
+			<script src="{{ url_for_lang('static', filename='assets/js/util.js') }}"></script>
+			<script src="{{ url_for_lang('static', filename='assets/js/main.js') }}"></script>
 
 	</body>
 </html>
