@@ -1,137 +1,192 @@
 <!DOCTYPE HTML>
 <html lang="{{ tolgee_lang }}">
-	<head>
-		<title>Dr. Susana Peña</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<meta name="author" content="Susana Oder-Pena" />
-		<meta name="robots" content="index, follow" />
 
-		<link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='assets/images/apple-touch-icon.png') }}" />
-		<link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='assets/favicon_susana/favicon-32x32.png' )}}" />
-		<link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='assets/favicon_susana/favicon-16x16.png') }}"/>
-		<link rel="manifest" href="{{ url_for( 'static', filename='assets/json/site.webmanifest' )}}" />
+<head>
+	<title>Dienstleistungen</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<meta name="author" content="Susana Oder-Pena" />
+	<meta name="robots" content="index, follow" />
 
-		<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}" />
-		<noscript><link rel="stylesheet" href="{{ url_for('static', filename='assets/css/noscript.css') }}" /></noscript>
-	</head>
-	<body class="is-preload">
+	<link rel="apple-touch-icon" sizes="180x180"
+		href="{{ url_for('static', filename='assets/images/apple-touch-icon.png') }}" />
+	<link rel="icon" type="image/png" sizes="32x32"
+		href="{{ url_for('static', filename='assets/favicon_susana/favicon-32x32.png' )}}" />
+	<link rel="icon" type="image/png" sizes="16x16"
+		href="{{ url_for('static', filename='assets/favicon_susana/favicon-16x16.png') }}" />
+	<link rel="manifest" href="{{ url_for( 'static', filename='assets/json/site.webmanifest' )}}" />
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+	<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}" />
+	<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/gallery.css') }}" />
+	<noscript>
+		<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/galleryNoscript.css') }}" />
+	</noscript>
+	<noscript>
+		<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/noscript.css') }}" />
+	</noscript>
+</head>
 
-				<!-- Header -->
-					<header id="header">
-						<a href="index.html" class="logo">Massively</a>
-					</header>
+<body class="is-preload">
 
-				<!-- Nav -->
-					<nav id="nav">
-						<ul class="links">
-							<li><a href="{{url_for('home')}}">Startseite</a></li>
-							<li><a href="{{url_for('firma')}}">Die Kanzlei</a></li>
-							<li class="active"><a href="">Dienstleistungen</a></li>
-							<li><a href="{{ url_for('about_me')}}">über mich</a></li>
-							<li><a href="{{ url_for('impresum')}}">Impressum</a></li>
-							<li><a href="{{ url_for('politic_privacy')}}">Datenschutzklärung</a></li>
+	<!-- Wrapper -->
+	<div id="wrapper" class="divided">
+
+		<!-- Header -->
+		<header id="header" class=>
+			<a href="{{url_for('home')}}" class="logo"><img
+					src="{{ url_for('static', filename='images/logo.png') }}"></a>
+		</header>
+
+		<!-- Nav -->
+		<nav id="nav">
+			<ul class="links">
+				<li><a href="{{url_for('home')}}">Startseite</a></li>
+				<li><a href="{{url_for('firma')}}">Die Kanzlei</a></li>
+				<li class="active"><a href="">Dienstleistungen</a></li>
+				<li><a href="{{ url_for('about_me')}}">über mich</a></li>
+				<li><a href="{{ url_for('impresum')}}">Impressum</a></li>
+			</ul>
+		</nav>
+
+		<!-- Main -->
+		<div id="main">
+
+			<!-- Post -->
+			<section class="post">
+				<header class="major">
+					<h1>Dienstleistungen</h1>
+					<p style="color: black;">Wir sind Ihr kompetenter Partner für internationales Geschäfts- und
+						Projektmanagement. Mit geografischem Schwerpunkt auf Deutschland, Spanien und Kolumbien decken
+						unsere Beratungsleistungen folgende Spezialgebiete ab:</p>
+				</header>
+			</section>
+			</ul>
+			<!-- Gallery -->
+			<div class="gallery style2 medium lightbox onscroll-fade-in">
+				<article>
+					<a href="static/images/extranjeria.jpg" class="image">
+						<img src="static/images/extranjeria.jpg" alt="" />
+					</a>
+					<div class="caption">
+						<h3>Zivilrecht mit Auslandsberührung</h3>
+						<p style="color: white;">Das Zivilrecht betrifft sämtliche Beziehungen zwischen privaten
+							Personen. Das internationale
+							Zivilrecht erfasst jeden Sachverhalt mit Auslandsbezug. Wir sind diesbezüglich spezialisiert
+							auf das Familienrecht insbesondere bieten wir Leistungen für Ehepartner mit
+							unterschiedlicher
+							Staatsangehörigkeit.</p>
+						<ul class="col-6 col-12-small">
+							<li>Eheverträge</li>
+							<li>Scheidung</li>
+							<li>Unterhalt</li>
+							<li>Sorge-und Umgangsrecht</li>
 						</ul>
-					</nav>
-
-				<!-- Main -->
-					<div id="main">
-
-						<!-- Post -->
-							<section class="post">
-								<header class="major">
-									<span class="date">April 25, 2017</span>
-									<h1>This is a<br />
-									Generic Page</h1>
-									<p>Aenean ornare velit lacus varius enim ullamcorper proin aliquam<br />
-									facilisis ante sed etiam magna interdum congue. Lorem ipsum dolor<br />
-									amet nullam sed etiam veroeros.</p>
-								</header>
-								<div class="image main"><img src="images/pic01.jpg" alt="" /></div>
-								<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur sapien risus, commodo eget turpis at, elementum convallis enim turpis, lorem ipsum dolor sit amet nullam.</p>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus. Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum.</p>
-							</section>
-
 					</div>
+				</article>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<section>
-							<form method="post" action="#">
-								<div class="fields">
-									<div class="field">
-										<label for="name">Name</label>
-										<input type="text" name="name" id="name" />
-									</div>
-									<div class="field">
-										<label for="email">Email</label>
-										<input type="text" name="email" id="email" />
-									</div>
-									<div class="field">
-										<label for="message">Message</label>
-										<textarea name="message" id="message" rows="3"></textarea>
-									</div>
-								</div>
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
-								</ul>
-							</form>
-						</section>
-						<section class="split contact">
-							<section class="alt">
-								<h3>Address</h3>
-								<p>1234 Somewhere Road #87257<br />
-								Nashville, TN 00000-0000</p>
-							</section>
-							<section>
-								<h3>Phone</h3>
-								<p><a href="#">(000) 000-0000</a></p>
-							</section>
-							<section>
-								<h3>Email</h3>
-								<p><a href="#">info@untitled.tld</a></p>
-							</section>
-							<section>
-								<h3>Social</h3>
-								<ul class="icons alt">
-									<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-								</ul>
-							</section>
-						</section>
-					</footer>
-
-				<!-- Copyright -->
-					<div id="copyright">
-						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+				<article>
+					<a href="static/images/civil.jpg" class="image">
+						<img src="static/images/civil.jpg" alt="" />
+					</a>
+					<div class="caption">
+						<h3>Ausländerrecht</h3>
+						<p style="color: white;">Das Ausländerecht umfasst die gesetzliche Bestimmung über die Einreise,
+							den Aufenthalt,
+							oder die Erwerbstätigkeit von Menschen, die nicht die Staatsangehörigkeit des
+							Aufenthaltsstaates besitzen.
+							Wie bieten Ihnen Unterstützung bei.</p>
+						<ul class="col-6 col-12-small">
+							<li>Visumsverfahren</li>
+							<li>Aufenthaltstiteln</li>
+							<li>Staatsangehörigkeit</li>
+						</ul>
 					</div>
+				</article>
 
+				<article>
+					<a href="static/images/inmobiliario.jpg" class="image">
+						<img src="static/images/inmobiliario.jpg" alt="" />
+					</a>
+					<div class="caption">
+						<h3>Immobilienrecht</h3>
+						<p>Ich biete Ihnen umfassende Rechtsberatung bei Immobilientransaktionen in Deutschland, vom
+							Kauf und
+							Verkauf bis zur Vermietung. Ich übernehme die Vertragsprüfung, die Verwaltung der Unterlagen
+							und die Streitbeilegung. Ich sorge dafür, dass Ihre Investition oder Ihr Vermögensmanagement
+							mit größtmöglicher Rechtssicherheit erfolgt.</p>
+						<ul class="col-6 col-12-small">
+							<li>Grundstücksverträge</li>
+							<li>Eigentumsrecht</li>
+						</ul>
+					</div>
+				</article>
+
+				<article>
+					<a href="static/images/asesoria.jpg" class="image">
+						<img src="static/images/asesoria.jpg" alt="" />
+					</a>
+					<div class="caption">
+						<h3>Persönliche Beratung</h3>
+						<p>Bei uns erhalten Sie eine professionelle und individuelle Beratung, ganz
+							nach Wunsch in virtuellen synchronen Meetings oder persönlich in unserem Büro.</p>
+					</div>
+				</article>
 			</div>
+			<ul class="actions special">
+				<li><a href="{{ url_for_lang('home')}}#contact" class="button large">Kontak</a></li>
+			</ul>
+		</div>
+		<footer id="footer">
+			<section>
+				<h3>Social</h3>
+				<ul class="icons alt">
+					<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+					<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+					<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+				</ul>
+			</section>
+		</footer>
+
+		<!-- Copyright -->
+		<div id="copyright">
+			<ul>
+				<li>Dr. Maria Susana Oder-Peña </li>
+			</ul>
+			<ul>
+				<li>Steuernummer-ID DE248517308</li>
+			</ul>
+			<ul>
+				<li>&copy; {{ current_year }} Kanzlei Dr. Susana Peña</li>
+				<li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+			</ul>
+			<ul>
+				<li>Photographer Inci Bosnak</li>
+				<li>Logo Design by JJO</li>
+			</ul>
+		</div>
+
 
 		<!-- Scripts -->
-			<script src="https://cdn.jsdelivr.net/npm/@tolgee/web/dist/tolgee-web.umd.min.js"></script>
-			<script>
+		<script src="https://cdn.jsdelivr.net/npm/@tolgee/web/dist/tolgee-web.umd.min.js"></script>
+		<script>
 			// Inyectamos la config desde Flask al frontend
 			window.tolgeeConfig = {
 				apiKey: "{{ tolgee_api_key }}",
 				apiUrl: "{{ tolgee_api_url }}",
 				language: "{{ tolgee_lang }}"
 			};
-			</script>
+		</script>
 		<!-- Scripts -->
-		 	<script src="{{ url_for('static', filename='assets/js/tolgee-init.js') }}"></script>
-			<script src="{{ url_for('static', filename='assets/js/jquery.min.js') }}"></script>
-			<script src="{{ url_for('static', filename='assets/js/jquery.scrollex.min.js') }}"></script>
-			<script src="{{ url_for('static', filename='assets/js/jquery.scrolly.min.js') }}"></script>
-			<script src="{{ url_for('static', filename='assets/js/browser.min.js') }}"></script>
-			<script src="{{ url_for('static', filename='assets/js/breakpoints.min.js') }}"></script>
-			<script src="{{ url_for('static', filename='assets/js/util.js') }}"></script>
-			<script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
+		<script src="{{ url_for('static', filename='assets/js/tolgee-init.js') }}"></script>
+		<script src="{{ url_for('static', filename='assets/js/jquery.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='assets/js/jquery.scrollex.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='assets/js/jquery.scrolly.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='assets/js/browser.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='assets/js/breakpoints.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='assets/js/util.js') }}"></script>
+		<script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
 
-	</body>
+</body>
+
 </html>

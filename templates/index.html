@@ -1,172 +1,220 @@
 <!DOCTYPE HTML>
 <html lang="{{ tolgee_lang }}">
-	<head>
-		<title>Dr. Susana Peña</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<meta name="author" content="Susana Oder-Pena" />
-		<meta name="robots" content="index, follow" />
 
-		<link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='assets/images/apple-touch-icon.png') }}" />
-		<link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='assets/favicon_susana/favicon-32x32.png' )}}" />
-		<link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='assets/favicon_susana/favicon-16x16.png') }}"/>
-		<link rel="manifest" href="{{ url_for( 'static', filename='assets/json/site.webmanifest' )}}" />
+<head>
+	<title>Startseite</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<meta name="author" content="Susana Oder-Pena" />
+	<meta name="robots" content="index, follow" />
 
-		<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}" />
-		<noscript><link rel="stylesheet" href="{{ url_for('static', filename='assets/css/noscript.css') }}" /></noscript>
-	</head>
-	<body class="is-preload">
+	<link rel="apple-touch-icon" sizes="180x180"
+		href="{{ url_for('static', filename='assets/images/apple-touch-icon.png') }}" />
+	<link rel="icon" type="image/png" sizes="32x32"
+		href="{{ url_for('static', filename='assets/favicon_susana/favicon-32x32.png' )}}" />
+	<link rel="icon" type="image/png" sizes="16x16"
+		href="{{ url_for('static', filename='assets/favicon_susana/favicon-16x16.png') }}" />
+	<link rel="manifest" href="{{ url_for( 'static', filename='assets/json/site.webmanifest' )}}" />
 
-		<!-- Wrapper -->
-			<div id="wrapper" class="fade-in">
-				<!-- Language Selector -->
-				 <div class="row">
-					<div class="col-1.5 col-1-small">
-						<select name="demo-category" id="demo-category">
-							<option value="es-CO">Español</option>
-							<option value="de-DE">Deutsch</option>
-							<option value="en-US">English</option>
-						</select>
-					</div>
-				</div>
-				
-				<!-- Intro -->
-					<div id="intro">
-						<h1>Kanzlei<br />
-						Dr. Susana Peña</h1>
-						<p data-i18n="lema-home">Wir vertreten Ihre Interessen in Deutschland, Spanien und Kolumbien</p>
-						<ul class="actions">
-							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly"></a></li>
-						</ul>
-					</div>
+	<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}" />
+	<noscript>
+		<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/noscript.css') }}" />
+	</noscript>
+</head>
 
-				<!-- Header -->
-					<header id="header" class=>
-						<a href="{{url_for('home')}}" class="logo"><img src="{{ url_for('static', filename='images/logo.png') }}"></a>
+<body class="is-preload">
 
-					</header>
-
-				<!-- Nav -->
-					<nav id="nav">
-						<ul class="links">
-							<li class="active"><a href="">Startseite</a></li>
-							<li><a href="{{url_for('firma')}}">Die Kanzlei</a></li>
-							<li><a href="{{url_for('services')}}">Dienstleistungen</a></li>
-							<li><a href="{{ url_for('about_me')}}">über mich</a></li>
-							<li><a href="{{ url_for('impresum')}}">Impressum</a></li>
-							<li><a href="{{ url_for('politic_privacy')}}">Datenschutzklärung</a></li>
-						</ul>
-					</nav>
-
-				<!-- Main -->
-					<div id="main">
-
-						<!-- Featured Post -->
-							<article class="post featured">
-								<header class="major">
-									<h2><a href="#">WILLKOMMEN<br />
-									</a></h2>
-									<p><b>auf den Seiten der Kanzlei
-										Dr. Susana Peña
-										<a href="https://maps.app.goo.gl/RXkbSbY74AHCimdq7" target="_blank">Häusserstraße 6a
-										69115 Heidelberg</a></p><br>
-									<p>Wir bieten Betreuung und Abwicklung grenzüberschreitender Mandate an, insbesondere in
-										den Bereichen des FAMILIENRECHTS, nämlich Scheidung, Unterhalt, Sorgerecht, Eheverträge,
-										sowie des IMMOBILIENRECHTS, nämlich Grundstücksverträge, Eigentumsrecht und des
-										 AUSLÄNDERRECHTS nämlich Visum, Aufenthalts- und Niederlassungserlaubnis, Staatsangehörigkeit. <br>
-										Auf den folgenden Seiten finden Sie weitere Informationen. Nehmen Sie gleich hier direkt  <a href="#footer">Kontakt</a> mit uns auf.</b></p>
-								</header>
-								<a href="#" class="image main"><img src="{{ url_for('static', filename='images/susana.png') }}" alt="" /></a>
-								<ul class="actions special">
-									<li><a href="#contact" class="button large">Kontak</a></li>
-								</ul>
-							</article>
-
-						<!-- Posts -->
-							
-					</div>
-
-				<!-- Footer -->
-					<footer id="footer">
-						<section id="contact">
-							<form method="post" action="#">
-								<div class="fields">
-									<div class="field">
-										<label for="name">Name</label>
-										<input type="text" name="name" id="name" />
-									</div>
-									<div class="field">
-										<label for="email">E-mail</label>
-										<input type="text" name="email" id="email" />
-									</div>
-									<div class="field">
-										<label for="message">Message</label>
-										<textarea name="message" id="message" rows="3"></textarea>
-									</div>
-								</div>
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
-								</ul>
-							</form>
-						</section>
-						<section class="split contact">
-							<section class="alt">
-								<h3>Addresse</h3>
-								<p><a href="https://maps.app.goo.gl/RXkbSbY74AHCimdq7" target="_blank">Häusserstraße 6a
-									69115 Heidelberg</a>
-								</p>
-							</section>
-							<section class="alt">
-								<h3>Phone</h3>
-								<p><a href="#">+49 (0) 6221 4337204</a></p>
-								<h3>Fax</h3>
-								<p><a href="#">+49 (0) 6221 4337205</a></p>
-							</section>
-							<section>
-								<h3>Email</h3>
-								<p><a href="mailto:info@pena-abogados.com">info@pena-abogados.com</a></p>
-							</section>
-							<section>
-								<h3>Social</h3>
-								<ul class="icons alt">
-									<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-								</ul>
-							</section>
-						</section>
-					</footer>
-
-				<!-- Copyright -->
-					<div id="copyright">
-						<ul><li>Dr. Maria Susana Oder-Peña </li></ul>
-						<ul><li>Steuernummer-ID DE248517308</li></ul>
-						<ul><li>&copy; {{ current_year }} Kanzlei Dr. Susana Peña</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
-						<ul><li>Photographer Inci Bosnak</li><li>Logo Design by JJO</li></ul>	
-					</div>
-
+	<!-- Wrapper -->
+	<div id="wrapper" class="fade-in">
+		<!-- Language Selector -->
+		<div class="row">
+			<div class="col-1.5 col-1-small">
+				<select name="demo-category" id="demo-category">
+					<option value="es-CO">Español</option>
+					<option value="de-DE">Deutsch</option>
+					<option value="en-US">English</option>
+				</select>
 			</div>
+		</div>
 
-			<!-- Scripts -->
-			<script src="https://cdn.jsdelivr.net/npm/@tolgee/web/dist/tolgee-web.umd.min.js"></script>
-			<script>
-			// Inyectamos la config desde Flask al frontend
-			window.tolgeeConfig = {
-				apiKey: "{{ tolgee_api_key }}",
-				apiUrl: "{{ tolgee_api_url }}",
-				language: "{{ tolgee_lang }}"
-			};
-			</script>
-		<!-- Scripts -->
-		 	<script src="{{ url_for_lang('static', filename='assets/js/tolgee-init.js') }}"></script>
-			<script src="{{ url_for_lang('static', filename='assets/js/jquery.min.js') }}"></script>
-			<script src="{{ url_for_lang('static', filename='assets/js/jquery.scrollex.min.js') }}"></script>
-			<script src="{{ url_for_lang('static', filename='assets/js/jquery.scrolly.min.js') }}"></script>
-			<script src="{{ url_for_lang('static', filename='assets/js/browser.min.js') }}"></script>
-			<script src="{{ url_for_lang('static', filename='assets/js/breakpoints.min.js') }}"></script>
-			<script src="{{ url_for_lang('static', filename='assets/js/util.js') }}"></script>
-			<script src="{{ url_for_lang('static', filename='assets/js/main.js') }}"></script>
+		<!-- Intro -->
+		<div id="intro">
+			<h1>Kanzlei<br />
+				Dr. Susana Peña</h1>
+			<p data-i18n="lema-home">Wir vertreten Ihre Interessen in Deutschland, Spanien und Kolumbien</p>
+			<ul class="actions">
+				<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly"></a></li>
+			</ul>
+		</div>
 
-	</body>
+		<!-- Header -->
+		<header id="header" class=>
+			<a href="{{url_for('home')}}" class="logo"><img
+					src="{{ url_for('static', filename='images/logo.png') }}"></a>
+		</header>
+
+		<!-- Nav -->
+		<nav id="nav">
+			<ul class="links">
+				<li class="active"><a href="" data-i18n="menu-home">Startseite</a></li>
+				<li><a href="{{url_for('firma')}}" data-i18n="menu-home-firma">Die Kanzlei</a></li>
+				<li><a href="{{url_for('services')}}" data-i18n="menu-home-services">Dienstleistungen</a></li>
+				<li><a href="{{ url_for('about_me')}}" data-i18n="menu-home-aboutMe">über mich</a></li>
+				<li><a href="{{ url_for('impresum')}}" data-i18n="menu-home-impresum">Impressum</a></li>
+			</ul>
+		</nav>
+
+		<!-- Main -->
+		<div id="main">
+
+			<!-- Featured Post -->
+			<article class="post featured">
+				<header class="major">
+					<h2 data-i18n="home-welcome"><a>WILLKOMMEN<br />
+						</a></h2>
+					<p data-i18n="home-address"><b>auf den Seiten der Kanzlei
+							Dr. Susana Peña
+							<a href="https://maps.app.goo.gl/RXkbSbY74AHCimdq7" target="_blank">Häusserstraße 6a
+								69115 Heidelberg</a></p>
+					<p>Wir bieten Betreuung und Abwicklung grenzüberschreitender Mandate an, insbesondere in
+						den Bereichen des FAMILIENRECHTS, nämlich Scheidung, Unterhalt, Sorgerecht, Eheverträge,
+						sowie des IMMOBILIENRECHTS, nämlich Grundstücksverträge, Eigentumsrecht und des
+						AUSLÄNDERRECHTS nämlich Visum, Aufenthalts- und Niederlassungserlaubnis, Staatsangehörigkeit.
+						<br>
+						Auf den folgenden Seiten finden Sie weitere Informationen. Nehmen Sie gleich hier direkt <a
+							href="#footer">Kontakt</a> mit uns auf.</b>
+					</p>
+					<a href="#" class="image main"><img src="{{ url_for('static', filename='images/susana.png') }}"
+							alt="" /></a>
+				</header>
+			</article>
+
+			<!-- Posts -->
+
+		</div>
+
+		<!-- Footer -->
+		<footer id="footer">
+			<section id="contact">
+				<form method="post" action="#">
+					<div class="fields">
+						<div class="field">
+							<label for="name">Vorname*</label>
+							<input type="text" name="name" id="name" required />
+						</div>
+						<div class="field">
+							<label for="name">Nachname*</label>
+							<input type="text" name="name" id="name" required />
+						</div>
+						<div class="field">
+							<label for="email">E-mail*</label>
+							<input type="text" name="email" id="email" required />
+						</div>
+						<div class="field">
+							<label for="phone">Telefon</label>
+							<input type="text" name="phone" id="phone" />
+						</div>
+						<div class="field">
+							<label for="message">Nachricht</label>
+							<textarea name="message" id="message" rows="3"></textarea>
+						</div><br>
+					</div>
+					<div class="col-6 col-8-small">
+						<input type="checkbox" id="demo-copy" name="demo-copy" required />
+						<label for="demo-copy">Mit dem Absenden dieses Formulars erklären Sie sich damit
+							einverstanden, dass die von Ihnen angegebenen personenbezogenen Daten zur Verarbeitung
+							gemäß unserer Datenschutzrichtlinie an unsere Datenbank übertragen werden.
+							<a href="{{ url_for('static', filename='assets/pdf/Datenschutzrichtlinien.pdf') }}"
+								target="_blank">Unsere
+								Datenschutzrichtlinien
+								finden Sie
+								hier.</a>
+						</label>
+					</div>
+					<ul class="actions">
+						<li><input type="submit" value="Nachricht senden" /></li>
+						<li><input type="reset" value="löschen" /></li>
+					</ul>
+					{% with messages = get_flashed_messages(with_categories=True) %}
+					{% if messages %}
+					<div class="flashes">
+						{% for category, message in messages %}
+						<div class="flash {{ category }}">{{ message }}</div>
+						{% endfor %}
+					</div>
+					{% endif %}
+					{% endwith %}
+				</form>
+			</section>
+			<section class="split contact">
+				<section class="alt">
+					<h3>Addresse</h3>
+					<p><a href="https://maps.app.goo.gl/RXkbSbY74AHCimdq7" target="_blank">Häusserstraße 6a
+							69115 Heidelberg</a>
+					</p>
+				</section>
+				<section class="alt">
+					<h3>Phone</h3>
+					<p><a href="#">+49 (0) 6221 4337204</a></p>
+				</section>
+				<section>
+					<h3>Email</h3>
+					<p><a href="mailto:info@pena-abogados.com">info@pena-abogados.com</a></p>
+				</section>
+				<section>
+					<h3>Social</h3>
+					<ul class="icons alt">
+						<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a>
+						</li>
+						<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a>
+						</li>
+						<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+					</ul>
+				</section>
+			</section>
+		</footer>
+
+		<!-- Copyright -->
+		<div id="copyright">
+			<ul>
+				<li>Dr. Maria Susana Oder-Peña </li>
+			</ul>
+			<ul>
+				<li>Steuernummer-ID DE248517308</li>
+			</ul>
+			<ul>
+				<li>&copy; {{ current_year }} Kanzlei Dr. Susana Peña</li>
+				<li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+			</ul>
+			<ul>
+				<li>Photographer Inci Bosnak</li>
+				<li>Logo Design by JJO</li>
+			</ul>
+		</div>
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="https://cdn.jsdelivr.net/npm/@tolgee/web/dist/tolgee-web.umd.min.js"></script>
+	<script>
+		// Inyectamos la config desde Flask al frontend
+		window.tolgeeConfig = {
+			apiKey: "{{ tolgee_api_key }}",
+			apiUrl: "{{ tolgee_api_url }}",
+			language: "{{ tolgee_lang }}"
+		};
+	</script>
+	<!-- Scripts -->
+	<script src="{{ url_for_lang('static', filename='assets/js/tolgee-init.js') }}"></script>
+	<script src="{{ url_for_lang('static', filename='assets/js/jquery.min.js') }}"></script>
+	<script src="{{ url_for_lang('static', filename='assets/js/jquery.scrollex.min.js') }}"></script>
+	<script src="{{ url_for_lang('static', filename='assets/js/jquery.scrolly.min.js') }}"></script>
+	<script src="{{ url_for_lang('static', filename='assets/js/browser.min.js') }}"></script>
+	<script src="{{ url_for_lang('static', filename='assets/js/breakpoints.min.js') }}"></script>
+	<script src="{{ url_for_lang('static', filename='assets/js/util.js') }}"></script>
+	<script src="{{ url_for_lang('static', filename='assets/js/main.js') }}"></script>
+
+</body>
+
 </html>

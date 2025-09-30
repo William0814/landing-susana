@@ -1,3 +1,4 @@
+from asyncio import sleep
 from flask import Flask, redirect, render_template, request, flash, url_for
 from percistence.form import Form, db
 from datetime import datetime
@@ -61,45 +62,42 @@ def home():
         name    = request.form['name'].strip()
         email   = request.form['email'].strip()
         message = request.form['message'].strip()
+        phone = request.form.get('phone').strip()
         date    = datetime.now()
+        acceptPolitic = request.form.get('demo-copy') == 'on'
 
-        db.session.add(Form(name=name, email=email, message=message, date=date))
+        db.session.add(Form(name=name, email=email, message=message, date=date, phone=phone, acceptPolitic=acceptPolitic))
         db.session.commit()
 
-        body = f"Name: {name}\nEmail: {email}\nMessage: {message}"
+        body = f"Name: {name}\nEmail: {email}\nMessage: {message}\nPhone: {phone}\nAccept Privacy Policy: {acceptPolitic}"
         Thread(target=send_email_async,
                args=("New Message from your CV!!", body, TO_EMAIL),
                daemon=True).start()
-
-        flash(f"Hi {name}, your message has been sent successfully!", "success")
+        flash(f"Hi , your message has been sent successfully!", "success")
+       
         return redirect(url_for('home', lang=lang))
-
+    sleep(4)
     return render_template('index.html', current_year=current_year, **context)
 
 @app.route('/firma')
 def firma():
     lang = request.args.get('lang', 'de-DE')
-    return render_template('firma.html', **tolgee.get_translation(lang))
+    return render_template('firma.html', current_year=current_year, **tolgee.get_translation(lang))
 
 @app.route('/services')
 def services():
     lang = request.args.get('lang', 'de-DE')
-    return render_template('services.html', **tolgee.get_translation(lang))
+    return render_template('services.html', current_year=current_year, **tolgee.get_translation(lang))
 
 @app.route("/about-me")
 def about_me():
     lang = request.args.get('lang', 'de-DE')
-    return render_template('aboutMe.html', **tolgee.get_translation(lang))
+    return render_template('aboutMe.html', current_year=current_year,  **tolgee.get_translation(lang))
 
 @app.route("/impresum")
 def impresum():
     lang = request.args.get('lang', 'de-DE')
-    return render_template('impresum.html', **tolgee.get_translation(lang))
-
-@app.route("/politic-privacy")
-def politic_privacy():
-    lang = request.args.get('lang', 'de-DE')
-    return render_template('politicPrivacy.html', **tolgee.get_translation(lang))
+    return render_template('impresum.html', current_year=current_year, **tolgee.get_translation(lang))
 
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))
