@@ -40,11 +40,11 @@
 		<!-- Nav -->
 		<nav id="nav">
 			<ul class="links">
-				<li><a href="{{url_for('home')}}">Startseite</a></li>
-				<li><a href="{{url_for('firma')}}">Die Kanzlei</a></li>
-				<li class="active"><a href="">Dienstleistungen</a></li>
-				<li><a href="{{ url_for('about_me')}}">über mich</a></li>
-				<li><a href="{{ url_for('impresum')}}">Impressum</a></li>
+				<li><a href="{{url_for('home')}}" data-i18n="menu-home">Startseite</a></li>
+				<li><a href="{{url_for('firma')}}" data-i18n="menu-home-firma">Die Kanzlei</a></li>
+				<li class="active"><a href="" data-i18n="menu-home-services">Dienstleistungen</a></li>
+				<li><a href="{{ url_for('about_me')}}" data-i18n="menu-home-aboutMe">über mich</a></li>
+				<li><a href="{{ url_for('impresum')}}" data-i18n="menu-home-impresum">Impressum</a></li>
 			</ul>
 		</nav>
 
@@ -54,8 +54,9 @@
 			<!-- Post -->
 			<section class="post">
 				<header class="major">
-					<h1>Dienstleistungen</h1>
-					<p style="color: black;">Wir sind Ihr kompetenter Partner für internationales Geschäfts- und
+					<h1 data-i18n="services-title">Dienstleistungen</h1>
+					<p data-i18n="services-descript" style="color: black;">Wir sind Ihr kompetenter Partner für
+						internationales Geschäfts- und
 						Projektmanagement. Mit geografischem Schwerpunkt auf Deutschland, Spanien und Kolumbien decken
 						unsere Beratungsleistungen folgende Spezialgebiete ab:</p>
 				</header>
@@ -68,18 +69,21 @@
 						<img src="static/images/extranjeria.jpg" alt="" />
 					</a>
 					<div class="caption">
-						<h3>Zivilrecht mit Auslandsberührung</h3>
-						<p style="color: white;">Das Zivilrecht betrifft sämtliche Beziehungen zwischen privaten
+						<h3 data-i18n="services-civil-title">Zivilrecht mit Auslandsberührung</h3>
+						<p data-i18n="services-civil-descript" style="color: white;">Das Zivilrecht betrifft sämtliche
+							Beziehungen zwischen privaten
 							Personen. Das internationale
 							Zivilrecht erfasst jeden Sachverhalt mit Auslandsbezug. Wir sind diesbezüglich spezialisiert
 							auf das Familienrecht insbesondere bieten wir Leistungen für Ehepartner mit
 							unterschiedlicher
 							Staatsangehörigkeit.</p>
 						<ul class="col-6 col-12-small">
-							<li>Eheverträge</li>
-							<li>Scheidung</li>
-							<li>Unterhalt</li>
-							<li>Sorge-und Umgangsrecht</li>
+							<p>
+								<li data-i18n="services-1">Eheverträge</li>
+								<li data-i18n="services-2">Scheidung</li>
+								<li data-i18n="services-3">Unterhalt</li>
+								<li data-i18n="services-4">Sorge-und Umgangsrecht</li>
+							</p>
 						</ul>
 					</div>
 				</article>
@@ -89,16 +93,18 @@
 						<img src="static/images/civil.jpg" alt="" />
 					</a>
 					<div class="caption">
-						<h3>Ausländerrecht</h3>
+						<h3 data-i18n="services-ausl-title">Ausländerrecht</h3>
 						<p style="color: white;">Das Ausländerecht umfasst die gesetzliche Bestimmung über die Einreise,
 							den Aufenthalt,
 							oder die Erwerbstätigkeit von Menschen, die nicht die Staatsangehörigkeit des
 							Aufenthaltsstaates besitzen.
 							Wie bieten Ihnen Unterstützung bei.</p>
 						<ul class="col-6 col-12-small">
-							<li>Visumsverfahren</li>
-							<li>Aufenthaltstiteln</li>
-							<li>Staatsangehörigkeit</li>
+							<p>
+								<li>Visumsverfahren</li>
+								<li>Aufenthaltstiteln</li>
+								<li>Staatsangehörigkeit</li>
+							</p>
 						</ul>
 					</div>
 				</article>

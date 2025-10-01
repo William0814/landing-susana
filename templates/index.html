@@ -72,18 +72,24 @@
 				<header class="major">
 					<h2 data-i18n="home-welcome"><a>WILLKOMMEN<br />
 						</a></h2>
-					<p data-i18n="home-address"><b>auf den Seiten der Kanzlei
-							Dr. Susana Peña
-							<a href="https://maps.app.goo.gl/RXkbSbY74AHCimdq7" target="_blank">Häusserstraße 6a
-								69115 Heidelberg</a></p>
-					<p>Wir bieten Betreuung und Abwicklung grenzüberschreitender Mandate an, insbesondere in
-						den Bereichen des FAMILIENRECHTS, nämlich Scheidung, Unterhalt, Sorgerecht, Eheverträge,
+					<p data-i18n="home-address" style="color: black;"><b>auf den Seiten der Kanzlei
+							Dr. Susana Peña </p>
+					<p><a href="https://maps.app.goo.gl/RXkbSbY74AHCimdq7" target="_blank">Häusserstraße 6a
+							69115 Heidelberg</a>
+						</b></p>
+					<p data-i18n="home-welcome-p" style="color: black;">Wir bieten Betreuung und Abwicklung
+						grenzüberschreitender Mandate an,
+						insbesondere in den Bereichen des FAMILIENRECHTS, nämlich Scheidung, Unterhalt, Sorgerecht,
+						Eheverträge,
 						sowie des IMMOBILIENRECHTS, nämlich Grundstücksverträge, Eigentumsrecht und des
 						AUSLÄNDERRECHTS nämlich Visum, Aufenthalts- und Niederlassungserlaubnis, Staatsangehörigkeit.
 						<br>
-						Auf den folgenden Seiten finden Sie weitere Informationen. Nehmen Sie gleich hier direkt <a
-							href="#footer">Kontakt</a> mit uns auf.</b>
+
+						Auf den folgenden Seiten finden Sie weitere Informationen. Nehmen Sie gleich hier direkt Kontakt
+						mit
+						uns auf.
 					</p>
+
 					<a href="#" class="image main"><img src="{{ url_for('static', filename='images/susana.png') }}"
 							alt="" /></a>
 				</header>
@@ -99,41 +105,45 @@
 				<form method="post" action="#">
 					<div class="fields">
 						<div class="field">
-							<label for="name">Vorname*</label>
+							<label for="name" data-i18n="home-name">Vorname*</label>
 							<input type="text" name="name" id="name" required />
 						</div>
 						<div class="field">
-							<label for="name">Nachname*</label>
+							<label for="name" data-i18n="home-lastname">Nachname*</label>
 							<input type="text" name="name" id="name" required />
 						</div>
 						<div class="field">
-							<label for="email">E-mail*</label>
+							<label for="email" data-i18n="home-email">E-mail*</label>
 							<input type="text" name="email" id="email" required />
 						</div>
 						<div class="field">
-							<label for="phone">Telefon</label>
+							<label for="phone" data-i18n="home-phone">Telefon</label>
 							<input type="text" name="phone" id="phone" />
 						</div>
 						<div class="field">
-							<label for="message">Nachricht</label>
-							<textarea name="message" id="message" rows="3"></textarea>
+							<label for="message" data-i18n="home-message">Nachricht*</label>
+							<textarea name="message" id="message" rows="3" required></textarea>
 						</div><br>
 					</div>
 					<div class="col-6 col-8-small">
 						<input type="checkbox" id="demo-copy" name="demo-copy" required />
-						<label for="demo-copy">Mit dem Absenden dieses Formulars erklären Sie sich damit
+						<label for="demo-copy" data-i18n="home-politic">Mit dem Absenden dieses Formulars erklären Sie
+							sich damit
 							einverstanden, dass die von Ihnen angegebenen personenbezogenen Daten zur Verarbeitung
-							gemäß unserer Datenschutzrichtlinie an unsere Datenbank übertragen werden.
-							<a href="{{ url_for('static', filename='assets/pdf/Datenschutzrichtlinien.pdf') }}"
-								target="_blank">Unsere
-								Datenschutzrichtlinien
-								finden Sie
-								hier.</a>
-						</label>
+							gemäß unserer Datenschutzrichtlinie an unsere Datenbank übertragen werden.</label>
+						<label for="demo-copy" data-i18n-html="false" data-i18n="home-politic-link">
+							Unsere
+							Datenschutzrichtlinien
+							finden Sie
+							hier.</label>
+						<a href="{{ url_for('static', filename='assets/pdf/Datenschutzrichtlinien.pdf') }}"
+							target="_blank">📝</a>
+
 					</div>
 					<ul class="actions">
-						<li><input type="submit" value="Nachricht senden" /></li>
-						<li><input type="reset" value="löschen" /></li>
+						<li><input type="submit" data-i18n="home-send-button" value="Senden" data-i18n-attr="value" />
+						</li>
+						<li><input type="reset" data-i18n="home-delete" value="löschen" data-i18n-attr="value" /></li>
 					</ul>
 					{% with messages = get_flashed_messages(with_categories=True) %}
 					{% if messages %}
@@ -148,17 +158,17 @@
 			</section>
 			<section class="split contact">
 				<section class="alt">
-					<h3>Addresse</h3>
+					<h3 data-i18n="home-address-form">Addresse</h3>
 					<p><a href="https://maps.app.goo.gl/RXkbSbY74AHCimdq7" target="_blank">Häusserstraße 6a
 							69115 Heidelberg</a>
 					</p>
 				</section>
 				<section class="alt">
-					<h3>Phone</h3>
+					<h3 data-i18n="home-phone-form">Telefon</h3>
 					<p><a href="#">+49 (0) 6221 4337204</a></p>
 				</section>
 				<section>
-					<h3>Email</h3>
+					<h3 data-i18n="home-email-form">E-mail</h3>
 					<p><a href="mailto:info@pena-abogados.com">info@pena-abogados.com</a></p>
 				</section>
 				<section>
@@ -181,7 +191,7 @@
 				<li>Dr. Maria Susana Oder-Peña </li>
 			</ul>
 			<ul>
-				<li>Steuernummer-ID DE248517308</li>
+				<li data-i18n="home-footer-id">Steuernummer-ID DE248517308</li>
 			</ul>
 			<ul>
 				<li>&copy; {{ current_year }} Kanzlei Dr. Susana Peña</li>
@@ -202,7 +212,7 @@
 		window.tolgeeConfig = {
 			apiKey: "{{ tolgee_api_key }}",
 			apiUrl: "{{ tolgee_api_url }}",
-			language: "{{ tolgee_lang }}"
+			language: "{{ tolgee_lang }}",
 		};
 	</script>
 	<!-- Scripts -->

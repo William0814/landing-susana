@@ -36,11 +36,11 @@
 		<!-- Nav -->
 		<nav id="nav">
 			<ul class="links">
-				<li><a href="{{url_for('home')}}">Startseite</a></li>
-				<li class="active"><a href="">Die Kanzlei</a></li>
-				<li><a href="{{url_for('services')}}">Dienstleistungen</a></li>
-				<li><a href="{{ url_for('about_me')}}">über mich</a></li>
-				<li><a href="{{ url_for('impresum')}}">Impressum</a></li>
+				<li><a href="{{url_for('home')}}" data-i18n="menu-home">Startseite</a></li>
+				<li class="active"><a href="" data-i18n="menu-home-firma">Die Kanzlei</a></li>
+				<li><a href="{{url_for('services')}}" data-i18n="menu-home-services">Dienstleistungen</a></li>
+				<li><a href="{{ url_for('about_me')}}" data-i18n="menu-home-aboutMe">über mich</a></li>
+				<li><a href="{{ url_for('impresum')}}" data-i18n="menu-home-impresum">Impressum</a></li>
 			</ul>
 		</nav>
 
@@ -50,7 +50,7 @@
 			<!-- Post -->
 			<section class="post">
 				<header class="major">
-					<h2><a>Unsere<br />
+					<h2><a data-i18n="firma-title">Unsere<br />
 							Kanzlei</a></h2>
 				</header>
 
@@ -59,34 +59,40 @@
 
 				<!-- Text stuff -->
 				<article class="post featured">
-					<p style="color: black;">ist im Herzen Heidelberg gelegen. Wir vertreten Privatpersonen und
-						Unternehmen in
-						Deutschland, Spanien und Kolumbien. Wir verfügen über die Zulassung in Deutschland, Spanien und
-						Kolumbien und können daher unsere Mandanten auch in diesen Ländern jeweils gerichtlich
-						vertreten.
-						Darüber hinaus kooperieren wir mit Rechtanwälten, Steuerberatern und Wirtschaftsprüfern, um für
-						unsere Mandanten in jedem einzelnen Fall eine bestmögliche Beratung und Vertretung zu
-						gewährleisten.
-						Korrespondenzsprachen: Deutsch und Spanisch</p>
+					<p style="color: black;" data-i18n="firma-descript">Unsere Kanzlei befindet sich im Herzen
+						Heidelbergs und vertritt
+						Privatpersonen und Unternehmen in Deutschland, Spanien und Kolumbien. Wir sind in allen
+						drei Ländern zugelassen und können unsere Mandanten daher direkt vor den Gerichten dieser
+						Länder vertreten. Darüber hinaus arbeiten wir eng mit spezialisierten Rechtsanwälten,
+						Steuerberatern und Wirtschaftsprüfern zusammen und bilden ein interdisziplinäres Team,
+						das sich in jedem Fall auf eine umfassende Beratung und solide Vertretung konzentriert.
+						Wir betreuen unsere Mandanten auf Deutsch und Spanisch und ermöglichen so eine enge
+						Kommunikation und ein präzises Verständnis ihrer rechtlichen Bedürfnisse.</p>
 				</article>
 				<hr />
 				<h3>Vergütung</h3>
 				<p style="color: black;"><span class="image left"><img
 							src="{{ url_for('static', filename='images/payment.jpg') }}" alt="" /></span>
-					Die Abrechnung des Honorars erfolgt über das Rechtsanwaltsvergütungsgesetz (RVG) oder individuell
-					auf
-					Basis einer Honorarvereinbarung, welche sich grundsätzlich nach dem Zeitaufwand oder Stundensatz
-					richtet.
-					Bei überschaubaren Fällen ist auch eine Pauschalvergütung möglich. Dadurch kann Ihrer finanziellen
-					Situation
-					Rechnung getragen werden. Wir übernehmen für Sie gerne die Beantragung der Kostenübernahme durch
-					Ihre
-					Rechtsschutzversicherung. Wir helfen Ihnen gerne bei der Beantragung von Prozesskostenhilfe, die
-					Ihnen unter
-					bestimmten Voraussetzungen zustehen kann.</p>
+					<span data-i18n="firma-pay">Die Abrechnung des Honorars erfolgt über das
+						Rechtsanwaltsvergütungsgesetz (RVG) oder
+						individuell
+						auf
+						Basis einer Honorarvereinbarung, welche sich grundsätzlich nach dem Zeitaufwand oder Stundensatz
+						richtet.
+						Bei überschaubaren Fällen ist auch eine Pauschalvergütung möglich. Dadurch kann Ihrer
+						finanziellen
+						Situation
+						Rechnung getragen werden. Wir übernehmen für Sie gerne die Beantragung der Kostenübernahme durch
+						Ihre
+						Rechtsschutzversicherung. Wir helfen Ihnen gerne bei der Beantragung von Prozesskostenhilfe, die
+						Ihnen unter
+						bestimmten Voraussetzungen zustehen kann.</span>
+				</p>
 
 				<ul class="actions special">
-					<li><a href="{{ url_for_lang('home')}}#contact" class="button large">Kontak</a></li>
+					<li><a href="{{ url_for('home')}}#contact" class="button large"
+							data-i18n="contact-button">Kontak</a>
+					</li>
 				</ul>
 		</div>
 		<!-- Footer -->
@@ -129,7 +135,7 @@
 		window.tolgeeConfig = {
 			apiKey: "{{ tolgee_api_key }}",
 			apiUrl: "{{ tolgee_api_url }}",
-			language: "{{ tolgee_lang }}"
+			language: "{{ tolgee_lang }}",
 		};
 	</script>
 	<!-- Scripts -->

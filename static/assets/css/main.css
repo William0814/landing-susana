@@ -3604,6 +3604,11 @@ input, select, textarea {
 
 		}
 
+		.required {
+  color: red;
+  font-weight: bold;
+}
+
 /* Nav */
 
 	#nav {

@@ -17,7 +17,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
 
 db.init_app(app)
-tolgee = TolgeeManager(api_key=os.getenv('TOLGEE_API_KEY'), default_lang='en-US')
+tolgee = TolgeeManager(api_key=os.getenv('TOLGEE_API_KEY'), default_lang='en-US', api_url=os.getenv('TOLGEE_API_URL'))
 
 SENDGRID_API_KEY = os.getenv("SENDGRID_API_KEY")
 FROM_EMAIL       = os.getenv("MAIL_USERNAME")     
