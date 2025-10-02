@@ -35,11 +35,11 @@
 		<!-- Nav -->
 		<nav id="nav">
 			<ul class="links">
-				<li><a href="{{url_for('home')}}">Startseite</a></li>
-				<li><a href="{{url_for('firma')}}">Die Kanzlei</a></li>
-				<li><a href="{{url_for('services')}}">Dienstleistungen</a></li>
-				<li class="active"><a href="">über mich</a></li>
-				<li><a href="{{ url_for('impresum')}}">Impressum</a></li>
+				<li><a href="{{url_for('home')}}" data-i18n="menu-home">Startseite</a></li>
+				<li><a href="{{url_for('firma')}}" data-i18n="menu-home-firma">Die Kanzlei</a></li>
+				<li><a href="{{url_for('services')}}" data-i18n="menu-home-services">Dienstleistungen</a></li>
+				<li class="active"><a href="{{ url_for('about_me')}}" data-i18n="menu-home-aboutMe">über mich</a></li>
+				<li><a href="{{ url_for('impresum')}}" data-i18n="menu-home-impresum">Impressum</a></li>
 			</ul>
 		</nav>
 
@@ -48,91 +48,102 @@
 			<!-- Post -->
 			<section class="post">
 				<header class="major">
-					<h2>Wer bin ich?</h2>
+					<h2 data-i18n="about-title">Wer bin ich?</h2>
 				</header>
 				<hr />
 				<h4>Dr. María Susana Oder- Peña, LL.M.</h4>
 				<p style="color: black;"><span class="image left"><img
 							src="{{ url_for('static', filename='images/susana.jpg') }}" alt="" /></span>
-					Ich bin (als Rechtsanwältin) in Spanien, Kolumbien und Deutschland zugelassen und biete eine echte
-					trilaterale Rechtsperspektive. <br>
+					<span data-i18n="about-susana">Ich bin (als Rechtsanwältin) in Spanien, Kolumbien und Deutschland
+						zugelassen und biete eine
+						echte
+						trilaterale Rechtsperspektive. <br>
 
-					Mein akademischer Hintergrund vereint die Stärken des lateinamerikanischen und europäischen Rechts.
-					Ich habe mein Studium an der
-					renommierten <b>Universidad del Colegio Mayor del Rosario</b> in Bogotá und der Ruperto Carola in
-					Heidelberg abgeschlossen.
-					Ergänzt wird diese Grundlage durch einen Master of Laws (LL.M.) und einen Doktortitel in
-					Rechtswissenschaften (PhD)
-					derselben deutschen Universität, die ein tiefes Verständnis internationaler Rechtssysteme
-					gewährleisten. <br>
+						Mein akademischer Hintergrund vereint die Stärken des lateinamerikanischen und europäischen
+						Rechts.
+						Ich habe mein Studium an der
+						renommierten <b>Universidad del Colegio Mayor del Rosario</b> in Bogotá und der Ruperto Carola
+						in
+						Heidelberg abgeschlossen.
+						Ergänzt wird diese Grundlage durch einen Master of Laws (LL.M.) und einen Doktortitel in
+						Rechtswissenschaften (PhD)
+						derselben deutschen Universität, die ein tiefes Verständnis internationaler Rechtssysteme
+						gewährleisten. <br>
 
-					Ich verfüge über langjährige Berufserfahrung in Kolumbien und Deutschland und verbinde meine
-					freiberufliche Tätigkeit mit
-					einer soliden Karriere als wissenschaftliche Mitarbeiterin an der Ruperto Carola in Heidelberg.
-					<b>2006 gründete ich meine
-						eigene Kanzlei, die Kanzlei Dr. Susana Peña</b> in Heidelberg, wo ich meine Erfahrung in der
-					Beratung und internationalen
-					Rechtsvertretung vertieft habe. <br>
+						Ich verfüge über langjährige Berufserfahrung in Kolumbien und Deutschland und verbinde meine
+						freiberufliche Tätigkeit mit
+						einer soliden Karriere als wissenschaftliche Mitarbeiterin an der Ruperto Carola in Heidelberg.
+						<b>2006 gründete ich meine
+							eigene Kanzlei, die Kanzlei Dr. Susana Peña</b> in Heidelberg, wo ich meine Erfahrung in der
+						Beratung und internationalen
+						Rechtsvertretung vertieft habe.</span> <br>
 				</p>
-				<h4><a target="_blank"
+				<h4><a target="_blank" data-i18n="about-link"
 						href="https://www.amazon.de/Einpersonengesellschaft-deutschen-kolumbianischen-Europ%C3%A4ische-Hochschulschriften/dp/3631527918/ref=sr_1_1">
 						Die Einpersonengesellschaft im deutschen und im kolumbianischen Recht
 					</a></h4>
 				<hr />
 
-				<h2><a>Schwerpunkte</a></h2>
+				<h2><a data-i18n="about-focus">Schwerpunkte</a></h2>
 				</header>
 				<ul style="color: black;" class="alt">
-					<li>Familienrecht</li>
-					<li>Ausländerrecht</li>
-					<li>Immobilienrecht</li>
-					<li>Ein besonderer Schwerpunkt meiner Tätigkeit sind grenzüberschreitende Fälle mit
+					<li data-i18n="about-focus-family">Familienrecht</li>
+					<li data-i18n="services-ausl-title">Ausländerrecht</li>
+					<li data-i18n="services-inmo-title">Immobilienrecht</li>
+					<li data-i18n="about-focus-cross">Ein besonderer Schwerpunkt meiner Tätigkeit sind
+						grenzüberschreitende Fälle mit
 						Lateinamerika- und Spanienbezug</li>
 				</ul>
 				</article>
 				<hr />
 				<article>
 					<header>
-						<h2><a>Fortbildungen</a></h2>
+						<h2><a data-i18n="about-forti-title">Fortbildungen</a></h2>
 					</header>
 					<ul style="color: black;" class="alt">
-						<li>Fachanwaltslehrgang in Familienrecht erfolgreich absolviert</li>
-						<li>Lehrgang als Mediatorin bei der DeutscheAnwaltAkademie erfolgreich absolviert</li>
-						<li>Regelmäßige Teilnahme an Fortbildungen in Familien- und Ausländerecht sowie in
+						<li data-i18n="about-forti-1">Fachanwaltslehrgang in Familienrecht erfolgreich absolviert</li>
+						<li data-i18n="about-forti-2">Lehrgang als Mediatorin bei der DeutscheAnwaltAkademie erfolgreich
+							absolviert</li>
+						<li data-i18n="about-forti-3">Regelmäßige Teilnahme an Fortbildungen in Familien- und
+							Ausländerecht sowie in
 							Immobilienrecht</li>
 					</ul>
 				</article>
 				<hr />
 				<article>
 					<header>
-						<h2><a>Mitgliedschaften</a></h2>
+						<h2><a data-i18n="about-member-title">Mitgliedschaften</a></h2>
 					</header>
 					<ul style="color: black;" class="alt">
-						<li>Heidelberger Anwaltsverein e.V.</li>
-						<li>Deutscher AnwaltVerein (DAV)</li>
-						<li>Arbeitsgemeinschaft Familienrecht im DAV</li>
-						<li>Arbeitsgemeinschaft Familienrecht im Heidelberger Anwaltsverein e.V.</li>
-						<li>Arbeitsgemeinschaft Asyl- und Ausländerecht im Heidelberger Anwaltsverein e.V.</li>
-						<li>Deutsch-Spanische Juristenvereinigung e.V.</li>
-						<li>Verein der Freunde und Förderer des Instituts für Internationales Privat- und
+						<li data-i18n="about-member-1">Heidelberger Anwaltsverein e.V.</li>
+						<li data-i18n="about-member-2">Deutscher AnwaltVerein (DAV)</li>
+						<li data-i18n="about-member-3">Arbeitsgemeinschaft Familienrecht im DAV</li>
+						<li data-i18n="about-member-4">Arbeitsgemeinschaft Familienrecht im Heidelberger Anwaltsverein
+							e.V.</li>
+						<li data-i18n="about-member-5">Arbeitsgemeinschaft Asyl- und Ausländerecht im Heidelberger
+							Anwaltsverein e.V.</li>
+						<li data-i18n="about-member-6">Deutsch-Spanische Juristenvereinigung e.V.</li>
+						<li data-i18n="about-member-7">Verein der Freunde und Förderer des Instituts für Internationales
+							Privat- und
 							Wirtschaftsrecht der Universität Heidelberg</li>
 					</ul>
 				</article>
 				<hr />
 				<article>
 					<header>
-						<h2><a>Sprachen</a></h2>
+						<h2><a data-i18n="languages">Sprachen</a></h2>
 					</header>
 					<ul style="color: black;" class="alt">
-						<li>Spanisch</li>
-						<li>Deutsch</li>
-						<li>Englisch</li>
+						<li data-i18n="spanisch">Spanisch</li>
+						<li data-i18n="germain">Deutsch</li>
+						<li data-i18n="english">Englisch</li>
 					</ul>
 				</article>
 			</section>
 			</section>
 			<ul class="actions special">
-				<li><a href="{{ url_for_lang('home')}}#contact" class="button large">Kontak</a></li>
+				<li><a href="{{ url_for('home')}}#contact" class="button large" data-i18n="contact-button">Kontakt</a>
+				</li>
 			</ul>
 		</div>
 		<!-- Footer -->

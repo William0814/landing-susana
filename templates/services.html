@@ -94,16 +94,17 @@
 					</a>
 					<div class="caption">
 						<h3 data-i18n="services-ausl-title">Ausländerrecht</h3>
-						<p style="color: white;">Das Ausländerecht umfasst die gesetzliche Bestimmung über die Einreise,
+						<p style="color: white;" data-i18n="services-ausl-p">Das Ausländerecht umfasst die gesetzliche
+							Bestimmung über die Einreise,
 							den Aufenthalt,
 							oder die Erwerbstätigkeit von Menschen, die nicht die Staatsangehörigkeit des
 							Aufenthaltsstaates besitzen.
 							Wie bieten Ihnen Unterstützung bei.</p>
 						<ul class="col-6 col-12-small">
 							<p>
-								<li>Visumsverfahren</li>
-								<li>Aufenthaltstiteln</li>
-								<li>Staatsangehörigkeit</li>
+								<li data-i18n="services-1-ausl">Visumsverfahren</li>
+								<li data-i18n="services-2-ausl">Aufenthaltstiteln</li>
+								<li data-i18n="services-3-ausl">Staatsangehörigkeit</li>
 							</p>
 						</ul>
 					</div>
@@ -114,16 +115,18 @@
 						<img src="static/images/inmobiliario.jpg" alt="" />
 					</a>
 					<div class="caption">
-						<h3>Immobilienrecht</h3>
-						<p>Ich biete Ihnen umfassende Rechtsberatung bei Immobilientransaktionen in Deutschland, vom
-							Kauf und
-							Verkauf bis zur Vermietung. Ich übernehme die Vertragsprüfung, die Verwaltung der Unterlagen
-							und die Streitbeilegung. Ich sorge dafür, dass Ihre Investition oder Ihr Vermögensmanagement
+						<h3 data-i18n="services-inmo-title">Immobilienrecht</h3>
+						<p data-i18n="services-inmo-p" style="color: white;">Ich biete Ihnen umfassende Rechtsberatung
+							bei
+							Immobilientransaktionen in Deutschland, vom
+							Kauf und Verkauf bis zur Vermietung. Ich übernehme die Vertragsprüfung, die Verwaltung der
+							Unterlagen und die Streitbeilegung. Ich sorge dafür, dass Ihre Investition oder Ihr
+							Vermögensmanagement
 							mit größtmöglicher Rechtssicherheit erfolgt.</p>
-						<ul class="col-6 col-12-small">
-							<li>Grundstücksverträge</li>
-							<li>Eigentumsrecht</li>
-						</ul>
+						<p class="col-6 col-12-small">
+							<li data-i18n="services-1-inmo">Grundstücksverträge</li>
+							<li data-i18n="services-2-inmo">Eigentumsrecht</li>
+						</p>
 					</div>
 				</article>
 
@@ -132,14 +135,16 @@
 						<img src="static/images/asesoria.jpg" alt="" />
 					</a>
 					<div class="caption">
-						<h3>Persönliche Beratung</h3>
-						<p>Bei uns erhalten Sie eine professionelle und individuelle Beratung, ganz
+						<h3 data-i18n="services-personal-title">Persönliche Beratung</h3>
+						<p data-i18n="services-personal-p">Bei uns erhalten Sie eine professionelle und individuelle
+							Beratung, ganz
 							nach Wunsch in virtuellen synchronen Meetings oder persönlich in unserem Büro.</p>
 					</div>
 				</article>
 			</div>
 			<ul class="actions special">
-				<li><a href="{{ url_for_lang('home')}}#contact" class="button large">Kontak</a></li>
+				<li><a href="{{ url_for('home')}}#contact" class="button large" data-i18n="contact-button">Kontakt</a>
+				</li>
 			</ul>
 		</div>
 		<footer id="footer">
@@ -160,7 +165,7 @@
 				<li>Dr. Maria Susana Oder-Peña </li>
 			</ul>
 			<ul>
-				<li>Steuernummer-ID DE248517308</li>
+				<li data-i18n="home-footer-id">Steuernummer-ID DE248517308</li>
 			</ul>
 			<ul>
 				<li>&copy; {{ current_year }} Kanzlei Dr. Susana Peña</li>
