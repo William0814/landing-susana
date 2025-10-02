@@ -33,11 +33,11 @@
 	<!-- Nav -->
 	<nav id="nav">
 		<ul class="links">
-			<li><a href="{{url_for('home')}}">Startseite</a></li>
-			<li><a href="{{url_for('firma')}}">Die Kanzlei</a></li>
-			<li><a href="{{url_for('services')}}">Dienstleistungen</a></li>
-			<li><a href="{{ url_for('about_me')}}">über mich</a></li>
-			<li class="active"><a href="">Impressum</a></li>
+			<li><a href="{{url_for('home')}}" data-i18n="menu-home">Startseite</a></li>
+			<li><a href="{{url_for('firma')}}" data-i18n="menu-home-firma">Die Kanzlei</a></li>
+			<li><a href="{{url_for('services')}}" data-i18n="menu-home-services">Dienstleistungen</a></li>
+			<li><a href="{{ url_for('about_me')}}" data-i18n="menu-home-aboutMe">über mich</a></li>
+			<li class="active"><a href="{{ url_for('impresum')}}" data-i18n="menu-home-impresum">Impressum</a></li>
 		</ul>
 	</nav>
 
@@ -47,21 +47,21 @@
 		<!-- Post -->
 		<section class="post">
 			<header class="major">
-				<h1>Impressum</h1>
+				<h1 data-i18n="impresum-title">Impressum</h1>
 			</header>
 
 
 			<div class="col-4"><span class="image right"><img src="static/images/impreso.jpeg" alt="" />
-					Angaben gemäß TMG, RStV und DL-InfoV<br>
+					<span data-i18n="impresum-information">Angaben gemäß TMG, RStV und DL-InfoV<br></span>
 					Dr. María Susana Oder-Peña, LL. M. <br>
 					Rechtsanwältin & Abogada <br>
 					Häusserstraße 6a 69115 Heidelberg <br>
-					<h6>Kontakt</h6>
+					<h6><a href="{{ url_for('home')}}#contact " data-i18n="contact-button">Kontakt</a></h6>
 					Tel: 06221/4337204 <br>
 					Fax: 06221/4337205 <br>
 					E-Mail: info@pena-abogados.com <br>
 					Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz: DE248517308
-					<b>Gesetzliche Berufsbezeichnung</b> Rechtsanwältin & Abogada
+					<b data-i18n="impresum-b">Gesetzliche Berufsbezeichnung</b> Rechtsanwältin & Abogada
 					Frau Rechstsanwältin Dr. Oder-Peña ist zur Ausübung der Rechtsanwaltstätigkeit in Deutschland,
 					Spanien und Kolumbien zugelassen.
 				</span>
@@ -70,30 +70,32 @@
 			</div>
 
 			<!-- Text stuff -->
-			<h3>Zuständige Kammern:</h3>
+			<h3 data-i18n="impresum-stuff-title">Zuständige Kammern:</h3>
 			<p><b>Rechtsanwaltskammer Karlsruhe</b><br>
-				Reinhold-Frank-Strasse 72 <br>
-				76133 Karlsruhe
-			</p>
-			<p><b>Ilustre Colegio de Abogados de Madrid</b><br>
-				Calle de Serrano 9 <br>
+				Reinhold-Frank-Strasse 72
+				76133 Karlsruhe</p>
+
+			<h3 data-i18n="impresum-madrid-title">Berühmte Anwaltskammer von Madrid</h3>
+			<p>Calle de Serrano 9 <br>
 				28001 Madrid
 			</p>
-			<p><b>Consejo Superior de la Judicatura en Bogotá</b><br>
-				Calle 12 Nr. 7-56 <br>
+			<h3 data-i18n="impresum-bogota-title">Oberster Justizrat in Bogotá</h3>
+			<p>Calle 12 Nr. 7-56 <br>
 				Bogotá, Colombia
 			</p>
-			<h3>Maßgebliche berufsrechtliche Regelungen:</h3>
+			<h3 data-i18n="impresum-regulations-title">Maßgebliche berufsrechtliche Regelungen:</h3>
 			<ul class="alt">
-				<li>Bundesrechtsanwaltsordnung (BRAO)</li>
-				<li>Berufsordnung für Rechtsanwälte (BORA)</li>
-				<li>Fachanwaltsordnung (FAO)</li>
-				<li>Rechtsanwaltsvergütungsgesetz (RVG)</li>
-				<li>Berufsregeln der Rechtsanwälte der Europäischen Union (CCBE)</li>
+				<li data-i18n="impresum-regulations-brao">Bundesrechtsanwaltsordnung (BRAO)</li>
+				<li data-i18n="impresum-regulations-bora">Berufsordnung für Rechtsanwälte (BORA)</li>
+				<li data-i18n="impresum-regulations-fao">Fachanwaltsordnung (FAO)</li>
+				<li data-i18n="impresum-regulations-rvg">Rechtsanwaltsvergütungsgesetz (RVG)</li>
+				<li data-i18n="impresum-regulations-ccbe">Berufsregeln der Rechtsanwälte der Europäischen Union (CCBE)
+				</li>
 			</ul>
 
-			<h4>Diese berufsrechtlichen Regelungen finden Sie auf der Homepage der Bundesrechtsanwaltskammer
-				(<a href="https://www.brak.de" target="_blank">www.brak.de</a>) unter der Rubrik „Berufsrecht“.</h4>
+			<h4 data-i18n="impresum-regulations-info">Diese berufsrechtlichen Regelungen finden Sie auf der Homepage der
+				Bundesrechtsanwaltskammer
+				unter der Rubrik „Berufsrecht“.</h4>(<a href="https://www.brak.de" target="_blank">www.brak.de</a>)
 
 			<ul class="alt">
 				<li>Estatuto General de abogacía en España (<a href="https://www.mjusticia.gob.es"
@@ -102,15 +104,16 @@
 						target="_blank">www.ramajudicial.gov.co</a>)</li>
 			</ul>
 
-			<h3>Inhaltlich Verantwortliche <br>
+			<h3 data-i18n="impresum-responsible-title">Inhaltlich Verantwortliche <br>
 				gemäß § 55 Abs. 2 RStV:</h3>
 			RStV: Dr. Susana Oder-Peña (Anschrift wie oben) <br>
 			Berufshaftpflichtversicherung <br>
 			Allianz Versicherungs-AG <br>
 			10900 Berlin
 			<hr />
-			<h2>Haftungsausschluss:</h2>
-			<p>Die Inhalte der Internetseite www.pena-abogados.com dienen allgemeinen Informationszwecken.
+			<h2 data-i18n="impresum-disclaimer-title">Haftungsausschluss:</h2>
+			<p data-i18n="impresum-disclaimer-text">Die Inhalte der Internetseite www.pena-abogados.com dienen
+				allgemeinen Informationszwecken.
 				Ihr Inhalt ist unverbindlich. Die Seiten sind weder als Teil von Geschäftsbeziehungen noch
 				als gewerbsmäßige Beratung anzusehen. Da Rechtsfragen in der Regel äußerst komplex und
 				vielfältig sind, empfehlen wir, unbedingt rechtlichen Rat einzuholen und sich nicht nur
@@ -120,13 +123,14 @@
 				Korrektheit, Vollständigkeit, Qualität oder Quelle der auf diesen Seiten dargebotenen
 				Informationen bzw. davon heruntergeladener Dateien übernehmen und sind in keiner Weise
 				verantwortlich für die Internetseiten Dritter.</p>
-			<p>Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer
+			<p data-i18n="impresum-disclaimer-external-links">Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir
+				keine Haftung für die Inhalte externer
 				Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.</p>
 		</section>
 		<ul class="actions special">
-			<li><a href="{{ url_for_lang('home')}}#contact" class="button large">Kontak</a></li>
+			<li><a href="{{ url_for('home')}}#contact" class="button large" data-i18n="contact-button">Kontak</a>
+			</li>
 		</ul>
-
 	</div>
 	<!-- Footer -->
 	<footer id="footer">
@@ -148,7 +152,7 @@
 			<li>Dr. Maria Susana Oder-Peña </li>
 		</ul>
 		<ul>
-			<li>Steuernummer-ID DE248517308</li>
+			<li data-i18n="home-footer-id">Steuernummer-ID DE248517308</li>
 		</ul>
 		<ul>
 			<li>&copy; {{ current_year }} Kanzlei Dr. Susana Peña</li>
@@ -159,66 +163,6 @@
 			<li>Logo Design by JJO</li>
 		</ul>
 	</div>
-
-</div>
-
-<!-- Footer -->
-<footer id="footer">
-	<section>
-		<form method="post" action="#">
-			<div class="fields">
-				<div class="field">
-					<label for="name">Name</label>
-					<input type="text" name="name" id="name" />
-				</div>
-				<div class="field">
-					<label for="email">Email</label>
-					<input type="text" name="email" id="email" />
-				</div>
-				<div class="field">
-					<label for="message">Message</label>
-					<textarea name="message" id="message" rows="3"></textarea>
-				</div>
-			</div>
-			<ul class="actions">
-				<li><input type="submit" value="Send Message" /></li>
-			</ul>
-		</form>
-	</section>
-	<section class="split contact">
-		<section class="alt">
-			<h3>Address</h3>
-			<p>1234 Somewhere Road #87257<br />
-				Nashville, TN 00000-0000</p>
-		</section>
-		<section>
-			<h3>Phone</h3>
-			<p><a href="#">(000) 000-0000</a></p>
-		</section>
-		<section>
-			<h3>Email</h3>
-			<p><a href="#">info@untitled.tld</a></p>
-		</section>
-		<section>
-			<h3>Social</h3>
-			<ul class="icons alt">
-				<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-				<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-				<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-				<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-			</ul>
-		</section>
-	</section>
-</footer>
-
-<!-- Copyright -->
-<div id="copyright">
-	<ul>
-		<li>&copy; Untitled</li>
-		<li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
-	</ul>
-</div>
-
 </div>
 
 <!-- Scripts -->
