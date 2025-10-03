@@ -56,7 +56,7 @@ def inject_url_for_lang():
 
 @app.route("/", methods=['GET', 'POST'])
 def home():
-    lang = request.args.get('lang', 'de-DE')
+    lang = request.args.get('lang')
     context = tolgee.get_translation(lang)
 
     if request.method == 'POST':
