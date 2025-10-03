@@ -60,17 +60,18 @@ def home():
     context = tolgee.get_translation(lang)
 
     if request.method == 'POST':
-        name    = request.form['name'].strip()
-        email   = request.form['email'].strip()
+        firstName = request.form['firstname'].strip()
+        lastName = request.form['lastname'].strip()
+        email = request.form['email'].strip()
         message = request.form['message'].strip()
         phone = request.form.get('phone').strip()
-        date    = datetime.now()
+        date = datetime.now()
         acceptPolitic = request.form.get('demo-copy') == 'on'
 
-        db.session.add(Form(name=name, email=email, message=message, date=date, phone=phone, acceptPolitic=acceptPolitic))
+        db.session.add(Form(firstName=firstName, lastName=lastName, email=email, message=message, date=date, phone=phone, acceptPolitic=acceptPolitic))
         db.session.commit()
 
-        body = f"Name: {name}\nEmail: {email}\nMessage: {message}\nPhone: {phone}\nAccept Privacy Policy: {acceptPolitic}"
+        body = f"Nombre: {firstName}\nApellido: {lastName}\nEmail: {email}\nMensaje: {message}\nTelefono: {phone}\nFecha: {date}\nAccept Privacy Policy: {acceptPolitic}"
         Thread(target=send_email_async,
                args=("Nuevo mensaje de tu sitio Web!!", body, TO_EMAIL),
                daemon=True).start()
