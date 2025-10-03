@@ -16,6 +16,6 @@ class GmailSmtpEmailSender(SendenEmail):
 
     def Send(self, subject: str, body: str, recipients: List[str], sender: Optional[str] = None) -> None:
 
-        _sender = sender or app.config.get('MAIL_USERNAME') or app.config.get('MAIL_DEFAULT_SENDER')
+        _sender = sender or app.config.get('MAIL_USERNAME')
         message = Message(subject=subject, sender=_sender, recipients=recipients, body=body)
         self.mail.send(message)

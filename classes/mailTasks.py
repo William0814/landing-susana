@@ -8,7 +8,7 @@ from .emailSender import SendenEmail
 MAILGUN_API_KEY = os.getenv("MG_API_KEY")    # en Railway
 MAILGUN_DOMAIN  = os.getenv("MG_DOMAIN")     # ej: mg.tudominio.com
 FROM_EMAIL      = os.getenv("MAIL_USERNAME")    # remitente autorizado en el dominio
-TO_EMAIL        = os.getenv("MAIL_USERNAME")
+TO_EMAIL        = os.getenv("MAIL_DESTINY")      # destinatario
 _executor = ThreadPoolExecutor(max_workers=2)
 def send_email_async(flask_app: Flask, email_sender: SendenEmail, subject: str, body: str, recipients: List[str], sender: Optional[str] = None) -> None:
     

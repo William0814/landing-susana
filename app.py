@@ -7,6 +7,7 @@ from threading import Thread
 import requests, os
 from dotenv import load_dotenv
 
+
 load_dotenv()
 app = Flask(__name__)
 current_year = datetime.now().year
@@ -21,7 +22,7 @@ tolgee = TolgeeManager(api_key=os.getenv('TOLGEE_API_KEY'), default_lang='en-US'
 
 SENDGRID_API_KEY = os.getenv("SENDGRID_API_KEY")
 FROM_EMAIL       = os.getenv("MAIL_USERNAME")     
-TO_EMAIL         = os.getenv("MAIL_USERNAME")  
+TO_EMAIL         = os.getenv("MAIL_DESTINY")  
 
 def send_email_async(subject: str, body: str, to_email: str):
     try:
@@ -71,10 +72,10 @@ def home():
 
         body = f"Name: {name}\nEmail: {email}\nMessage: {message}\nPhone: {phone}\nAccept Privacy Policy: {acceptPolitic}"
         Thread(target=send_email_async,
-               args=("New Message from your CV!!", body, TO_EMAIL),
+               args=("Nuevo mensaje de tu sitio Web!!", body, TO_EMAIL),
                daemon=True).start()
         flash(f"Hi , your message has been sent successfully!", "success")
-       
+        sleep(2)
         return redirect(url_for('home', lang=lang))
     sleep(4)
     return render_template('index.html', current_year=current_year, **context)
