@@ -2867,11 +2867,7 @@ input, select, textarea {
 
 /* Icons */
 
-	ul.icons {
-		cursor: default;
-		list-style: none;
-		padding-left: 0;
-	}
+	
 
 		ul.icons li {
 			display: inline-block;
@@ -2995,7 +2991,7 @@ input, select, textarea {
 		}
 
 		table tbody tr.alt {
-			background-color: rgba(0, 0, 0, 0.05) !important;
+			background-color: rgba(245, 16, 16, 0.05) !important;
 		}
 
 	table th {
