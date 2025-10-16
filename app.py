@@ -101,6 +101,11 @@ def impresum():
     lang = request.args.get('lang', 'de-DE')
     return render_template('impresum.html', current_year=current_year, **tolgee.get_translation(lang))
 
+@app.route("/privacy")
+def privacy():
+    lang = request.args.get('lang', 'de-DE')
+    return render_template('privacy.html', current_year=current_year, **tolgee.get_translation(lang))
+
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))
     app.run(debug=True, host='0.0.0.0', port=port)

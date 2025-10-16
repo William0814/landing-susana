@@ -41,6 +41,7 @@
 				<li><a href="{{url_for('services')}}" data-i18n="menu-home-services">Dienstleistungen</a></li>
 				<li><a href="{{ url_for('about_me')}}" data-i18n="menu-home-aboutMe">über mich</a></li>
 				<li><a href="{{ url_for('impresum')}}" data-i18n="menu-home-impresum">Impressum</a></li>
+				<li><a href="{{ url_for('privacy')}}" data-i18n="menu-home-privacy">Datenschutz</a></li>
 			</ul>
 		</nav>
 
@@ -53,26 +54,17 @@
 					<h2><a data-i18n="firma-title">Unsere<br />
 							Kanzlei</a></h2>
 				</header>
-
+				<hr />
 				<a href="" class="image main"><img src="{{ url_for('static', filename='images/firma.jpeg') }}"
 						alt="" /></a>
 
 				<!-- Text stuff -->
 				<article class="post featured">
-					<p style="color: black;" data-i18n="firma-descript">Unsere Kanzlei befindet sich im Herzen
-						Heidelbergs und vertritt
-						Privatpersonen und Unternehmen in Deutschland, Spanien und Kolumbien. Wir sind in allen
-						drei Ländern zugelassen und können unsere Mandanten daher direkt vor den Gerichten dieser
-						Länder vertreten. Darüber hinaus arbeiten wir eng mit spezialisierten Rechtsanwälten,
-						Steuerberatern und Wirtschaftsprüfern zusammen und bilden ein interdisziplinäres Team,
-						das sich in jedem Fall auf eine umfassende Beratung und solide Vertretung konzentriert.
-						Wir betreuen unsere Mandanten auf Deutsch und Spanisch und ermöglichen so eine enge
-						Kommunikation und ein präzises Verständnis ihrer rechtlichen Bedürfnisse.</p>
+					<p style="color: black;" data-i18n="firma-descript"></p>
 				</article>
 				<hr />
-				<h3>Vergütung</h3>
-				<p style="color: black;"><span class="image left"><img
-							src="{{ url_for('static', filename='images/payment.jpg') }}" alt="" /></span>
+				<h3 data-i18n="money">Vergütung</h3>
+				<p style="color: black;">
 					<span data-i18n="firma-pay">Die Abrechnung des Honorars erfolgt über das
 						Rechtsanwaltsvergütungsgesetz (RVG) oder
 						individuell
@@ -105,13 +97,14 @@
 						<li><a href="" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a>
 						</li>
 						<li><a href="" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>-->
-					<li><a href="" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a>
+					<li><a href="https://share.google/SGkgSo4xeqm79YAYD" target="_blank"
+							class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a>
 					</li>
-					<li><a href="https://www.anwalt.de/" target="_blank" class="icon solid alt fa-globe"
-							title="Anwalt.de"><span class="label">Anwalt</span></a>
+					<li><a href="https://www.anwalt.de/maria-susana-oder-pena" target="_blank"
+							class="icon solid alt fa-globe" title="Anwalt.de"><span class="label">Anwalt</span></a>
 					</li>
 					<li><a href="https://anwaltverein.de/" target="_blank" class="icon solid alt fa-link"
-							title="Anwaltverein.de"><span class="label">Anwaltverein</span></a></li>
+							title="Anwaltverein.de"><span class="label">Anwaltverein</span></a></li><br>
 				</ul>
 			</section>
 		</footer>

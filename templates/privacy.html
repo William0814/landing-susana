@@ -1,0 +1,186 @@
+<!DOCTYPE HTML>
+<html lang="{{ tolgee_lang }}">
+
+<head>
+    <title>Die Kanzlei</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="author" content="Susana Oder-Pena" />
+    <meta name="robots" content="index, follow" />
+
+    <link rel="apple-touch-icon" sizes="180x180"
+        href="{{ url_for('static', filename='assets/images/apple-touch-icon.png') }}" />
+    <link rel="icon" type="image/png" sizes="32x32"
+        href="{{ url_for('static', filename='assets/favicon_susana/favicon-32x32.png' )}}" />
+    <link rel="icon" type="image/png" sizes="16x16"
+        href="{{ url_for('static', filename='assets/favicon_susana/favicon-16x16.png') }}" />
+    <link rel="manifest" href="{{ url_for( 'static', filename='assets/json/site.webmanifest' )}}" />
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}" />
+    <noscript>
+        <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/noscript.css') }}" />
+    </noscript>
+</head>
+
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        <header id="header">
+            <a href="{{url_for('home')}}" class="logo"><img
+                    src="{{ url_for('static', filename='images/logo.png') }}"></a>
+        </header>
+
+        <!-- Nav -->
+        <nav id="nav">
+            <ul class="links">
+                <li><a href="{{url_for('home')}}" data-i18n="menu-home">Startseite</a></li>
+                <li><a href="{{url_for('firma')}}" data-i18n="menu-home-firma">Die Kanzlei</a></li>
+                <li><a href="{{url_for('services')}}" data-i18n="menu-home-services">Dienstleistungen</a></li>
+                <li><a href="{{ url_for('about_me')}}" data-i18n="menu-home-aboutMe">über mich</a></li>
+                <li><a href="{{ url_for('impresum')}}" data-i18n="menu-home-impresum">Impressum</a></li>
+                <li class="active"><a href="" data-i18n="menu-home-privacy">Datenschutz</a></li>
+
+            </ul>
+        </nav>
+
+        <!-- Main -->
+        <div id="main">
+
+            <!-- Post -->
+            <section class="post">
+                <header class="major">
+                    <h2><a data-i18n="menu-home-privacy">DATENSCHUTZERKLÄRUNG</a></h2>
+                </header>
+                <hr />
+                <!-- Text stuff -->
+                <h3 data-i18n="privacy-subtitle-1">1. Allgemeine Hinweise</h3>
+                <p style="color: black;" data-i18n="privacy-text-1"></p>
+                <hr />
+
+                <h3 data-i18n="privacy-subtitle-2">2. Erhebung und Verarbeitung personenbezogener Daten</h3>
+                <p style="color: black;" data-i18n="privacy-text-2"></p>
+                <hr />
+
+                <h3 data-i18n="privacy-subtitle-3">3. Datenschutzbeauftragte/r</h3>
+                <p style="color: black;" data-i18n="privacy-text-3"></p>
+                <hr />
+
+                <h3 data-i18n="privacy-subtitle-4">4. Rechte der betroffenen Person</h3>
+                <p style="color: black;" data-i18n="privacy-text-4"></p>
+                <hr />
+
+                <h3 data-i18n="privacy-subtitle-5">5. Art und Zweck der so erhobenen Daten und deren Verwendung</h3>
+                <p style="color: black;" data-i18n="privacy-text-5"></p>
+                <ul style="color: black;">
+                    <li data-i18n="privacy-li-1"></li>
+                    <li data-i18n="privacy-li-2"></li>
+                    <li data-i18n="privacy-li-3"></li>
+                    <li data-i18n="privacy-li-4"></li>
+                    <li data-i18n="privacy-li-5"></li>
+                    <li data-i18n="privacy-li-6"></li>
+                    <li data-i18n="privacy-li-7"></li>
+                </ul>
+                <hr />
+
+                <h3 data-i18n="privacy-subtitle-6">6. Weitergabe von Daten an Dritte</h3>
+                <p style="color: black;" data-i18n="privacy-text-6"></p>
+                <hr />
+
+                <h3 data-i18n="privacy-subtitle-7">7. Ihre Rechte als Betroffener der Datenverarbeitung</h3>
+                <p style="color: black;" data-i18n="privacy-text-7"></p>
+                <ul style="color: black;">
+                    <li data-i18n="privacy-li-8"></li>
+                    <li data-i18n="privacy-li-9"></li>
+                    <li data-i18n="privacy-li-10"></li>
+                    <li data-i18n="privacy-li-11"></li>
+                    <li data-i18n="privacy-li-12"></li>
+                    <li data-i18n="privacy-li-13"></li>
+                </ul>
+                <hr />
+
+                <h3 data-i18n="privacy-subtitle-8">8. Datensicherheit</h3>
+                <p style="color: black;" data-i18n="privacy-text-8"></p>
+                <hr />
+
+                <h3 data-i18n="privacy-subtitle-9">9. Änderung dieser Datenschutzerklärung</h3>
+                <p style="color: black;" data-i18n="privacy-text-9"></p>
+                <hr />
+
+                <h3 data-i18n="privacy-subtitle-10">10. Aktualität dieser Datenschutzerklärung</h3>
+                <p style="color: black;" data-i18n="privacy-text-10"></p>
+
+            </section>
+            <ul class="actions special">
+                <li><a href="{{ url_for('home')}}#contact" class="button large" data-i18n="contact-button">Kontak</a>
+                </li>
+            </ul>
+        </div>
+        <!-- Footer -->
+        <footer id="footer">
+            <section>
+                <h3>Social</h3>
+                <ul class="icons alt">
+                    <!--<li><a href="" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a>
+						</li>
+						<li><a href="" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a>
+						</li>
+						<li><a href="" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>-->
+                    <li><a href="https://share.google/SGkgSo4xeqm79YAYD" target="_blank"
+                            class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a>
+                    </li>
+                    <li><a href="https://www.anwalt.de/maria-susana-oder-pena" target="_blank"
+                            class="icon solid alt fa-globe" title="Anwalt.de"><span class="label">Anwalt</span></a>
+                    </li>
+                    <li><a href="https://anwaltverein.de/" target="_blank" class="icon solid alt fa-link"
+                            title="Anwaltverein.de"><span class="label">Anwaltverein</span></a></li><br>
+                </ul>
+            </section>
+        </footer>
+
+        <!-- Copyright -->
+        <div id="copyright">
+            <ul>
+                <li>Dr. Maria Susana Oder-Peña </li>
+            </ul>
+            <ul>
+                <li data-i18n="home-footer-id">Steuernummer-ID DE248517308</li>
+            </ul>
+            <ul>
+                <li>&copy; {{ current_year }} Kanzlei Dr. Susana Peña</li>
+                <li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+            </ul>
+            <ul>
+                <li>Photographer Inci Bosnak</li>
+                <li>Logo Design by JJO</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/@tolgee/web/dist/tolgee-web.umd.min.js"></script>
+    <script>
+        // Inyectamos la config desde Flask al frontend
+        window.tolgeeConfig = {
+            apiKey: "{{ tolgee_api_key }}",
+            apiUrl: "{{ tolgee_api_url }}",
+            language: "{{ tolgee_lang }}",
+        };
+    </script>
+    <!-- Scripts -->
+    <script src="{{ url_for_lang('static', filename='assets/js/tolgee-init.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/jquery.scrollex.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/jquery.scrolly.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/browser.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/breakpoints.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/util.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
+
+</body>
+
+</html>

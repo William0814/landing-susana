@@ -45,6 +45,7 @@
 				<li class="active"><a href="" data-i18n="menu-home-services">Dienstleistungen</a></li>
 				<li><a href="{{ url_for('about_me')}}" data-i18n="menu-home-aboutMe">über mich</a></li>
 				<li><a href="{{ url_for('impresum')}}" data-i18n="menu-home-impresum">Impressum</a></li>
+				<li><a href="{{ url_for('privacy')}}" data-i18n="menu-home-privacy">Datenschutz</a></li>
 			</ul>
 		</nav>
 
@@ -55,10 +56,11 @@
 			<section class="post">
 				<header class="major">
 					<h1 data-i18n="services-title">Dienstleistungen</h1>
-					<p data-i18n="services-descript" style="color: black;">Wir sind Ihr kompetenter Partner für
-						internationales Geschäfts- und
-						Projektmanagement. Mit geografischem Schwerpunkt auf Deutschland, Spanien und Kolumbien decken
-						unsere Beratungsleistungen folgende Spezialgebiete ab:</p>
+					<hr />
+					<p style="color: black;" data-i18n="services-descript">
+						Mit dem Schwertpunkt der Länder Deutschland, Spanien, Kolumbien umfasst die Bandbreite unserer
+						Beratung folgende Bereiche:
+					</p>
 				</header>
 
 				</ul>
@@ -69,8 +71,9 @@
 							<img src="static/images/extranjeria.jpg" alt="" />
 						</a>
 						<div class="caption">
-							<h3 data-i18n="services-civil-title">Zivilrecht mit Auslandsberührung</h3>
-							<p data-i18n="services-civil-descript" style="color: white;">Das Zivilrecht betrifft
+							<h3 data-i18n="services-civil-title" style="color: whitesmoke;">Zivilrecht mit
+								Auslandsberührung</h3>
+							<!-- <p data-i18n="services-civil-descript" style="color: white;">Das Zivilrecht betrifft
 								sämtliche
 								Beziehungen zwischen privaten
 								Personen. Das internationale
@@ -78,11 +81,13 @@
 								spezialisiert
 								auf das Familienrecht insbesondere bieten wir Leistungen für Ehepartner mit
 								unterschiedlicher
-								Staatsangehörigkeit.</p>
-							<ul class="col-6 col-12-small">
+								Staatsangehörigkeit.</p> -->
+							<ul class="col-8 col-12-small">
 								<p>
 									<li data-i18n="services-1">Eheverträge</li>
+									<li data-i18n="services-6">Güterrecht</li>
 									<li data-i18n="services-2">Scheidung</li>
+									<li data-i18n="services-5">Vermögensauseinandersetzungen</li>
 									<li data-i18n="services-3">Unterhalt</li>
 									<li data-i18n="services-4">Sorge-und Umgangsrecht</li>
 								</p>
@@ -96,18 +101,20 @@
 						</a>
 						<div class="caption">
 							<h3 data-i18n="services-ausl-title">Ausländerrecht</h3>
-							<p style="color: white;" data-i18n="services-ausl-p">Das Ausländerecht umfasst die
+							<!-- <p style="color: white;" data-i18n="services-ausl-p">Das Ausländerecht umfasst die
 								gesetzliche
 								Bestimmung über die Einreise,
 								den Aufenthalt,
 								oder die Erwerbstätigkeit von Menschen, die nicht die Staatsangehörigkeit des
 								Aufenthaltsstaates besitzen.
-								Wie bieten Ihnen Unterstützung bei.</p>
+								Wie bieten Ihnen Unterstützung bei.</p> -->
 							<ul class="col-6 col-12-small">
 								<p>
 									<li data-i18n="services-1-ausl">Visumsverfahren</li>
 									<li data-i18n="services-2-ausl">Aufenthaltstiteln</li>
+									<li data-i18n="services-4-ausl">Niederlassungserlaubnis</li>
 									<li data-i18n="services-3-ausl">Staatsangehörigkeit</li>
+									<li data-i18n="services-5-ausl">Aufenthaltskarte-EU</li>
 								</p>
 							</ul>
 						</div>
@@ -119,7 +126,7 @@
 						</a>
 						<div class="caption">
 							<h3 data-i18n="services-inmo-title">Immobilienrecht</h3>
-							<p data-i18n="services-inmo-p" style="color: white;">Ich biete Ihnen umfassende
+							<!-- <p data-i18n="services-inmo-p" style="color: white;">Ich biete Ihnen umfassende
 								Rechtsberatung
 								bei
 								Immobilientransaktionen in Deutschland, vom
@@ -127,11 +134,13 @@
 								der
 								Unterlagen und die Streitbeilegung. Ich sorge dafür, dass Ihre Investition oder Ihr
 								Vermögensmanagement
-								mit größtmöglicher Rechtssicherheit erfolgt.</p>
-							<p class="col-6 col-12-small">
-								<li data-i18n="services-1-inmo">Grundstücksverträge</li>
-								<li data-i18n="services-2-inmo">Eigentumsrecht</li>
-							</p>
+								mit größtmöglicher Rechtssicherheit erfolgt.</p>-->
+							<ul class="col-6 col-12-small">
+								<p>
+									<li data-i18n="services-1-inmo">Grundstücksverträge</li>
+									<li data-i18n="services-2-inmo">Eigentumsrecht</li>
+								</p>
+							</ul>
 						</div>
 					</article>
 
@@ -163,8 +172,8 @@
 						<li><a href="" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a>
 						</li>
 						<li><a href="" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>-->
-					<li><a href="" class="icon brands alt fa-linkedin-in" target="_blank"><span
-								class="label">LinkedIn</span></a>
+					<li><a href="https://share.google/SGkgSo4xeqm79YAYD" class="icon brands alt fa-linkedin-in"
+							target="_blank"><span class="label">LinkedIn</span></a>
 					</li>
 					<li><a href="https://www.anwalt.de/" target="_blank" class="icon solid alt fa-globe"
 							title="Anwalt.de"><span class="label">Anwalt</span></a>

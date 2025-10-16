@@ -61,6 +61,7 @@
 				<li><a href="{{url_for('services')}}" data-i18n="menu-home-services">Dienstleistungen</a></li>
 				<li><a href="{{ url_for('about_me')}}" data-i18n="menu-home-aboutMe">über mich</a></li>
 				<li><a href="{{ url_for('impresum')}}" data-i18n="menu-home-impresum">Impressum</a></li>
+				<li><a href="{{ url_for('privacy')}}" data-i18n="menu-home-privacy">Datenschutz</a></li>
 			</ul>
 		</nav>
 
@@ -70,35 +71,22 @@
 			<!-- Featured Post -->
 			<article class="post featured">
 				<header class="major">
-					<h2 data-i18n="home-welcome"><a>WILLKOMMEN<br />
-						</a></h2>
-					<p data-i18n="home-address" style="color: black;"><b>auf den Seiten der Kanzlei
-							Dr. Susana Peña </p>
-					<p><a href="https://maps.app.goo.gl/RXkbSbY74AHCimdq7" target="_blank">Häusserstraße 6a
-							69115 Heidelberg</a>
-						</b></p>
-					<p data-i18n="home-welcome-p" style="color: black;">Wir bieten Betreuung und Abwicklung
-						grenzüberschreitender Mandate an,
-						insbesondere in den Bereichen des FAMILIENRECHTS, nämlich Scheidung, Unterhalt, Sorgerecht,
-						Eheverträge,
-						sowie des IMMOBILIENRECHTS, nämlich Grundstücksverträge, Eigentumsrecht und des
-						AUSLÄNDERRECHTS nämlich Visum, Aufenthalts- und Niederlassungserlaubnis, Staatsangehörigkeit.
-						<br>
-
-						Auf den folgenden Seiten finden Sie weitere Informationen. Nehmen Sie gleich hier direkt Kontakt
-						mit
-						uns auf.
-					</p>
-
+					<h2 data-i18n="home-welcome"><a>WILLKOMMEN</a></h2>
+					<hr />
+					<h3 data-i18n="home-address">auf den Seiten der Kanzlei Dr. Susana Peña</h3>
+					<p data-i18n="home-familie" style="color: black;"></p>
+					<p data-i18n="home-welcome-p" style="color: black;"><br></p>
+					<p><a href="https://maps.app.goo.gl/RXkbSbY74AHCimdq7" target="_blank"
+							data-i18n="how-arrive"></a></b></p>
+					<p><a href="#contact" data-i18n="contact-home-here">Oder nehmen Sie gleich hier direkt Kontakt
+							mit
+							uns auf.</a></p>
 					<a href="{{ url_for('about_me') }}" class="image main"><img
 							src="{{ url_for('static', filename='images/susana.png') }}" alt="" /></a>
 				</header>
 			</article>
-
 			<!-- Posts -->
-
 		</div>
-
 		<!-- Footer -->
 		<footer id="footer">
 			<section id="contact" name="contact">
@@ -182,14 +170,20 @@
 						<li><a href="" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a>
 						</li>
 						<li><a href="" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>-->
-						<li><a href="" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a>
+						<li><a href="https://share.google/SGkgSo4xeqm79YAYD" target="_blank"
+								class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a>
 						</li>
-						<li><a href="https://www.anwalt.de/" target="_blank" class="icon solid alt fa-globe"
-								title="Anwalt.de"><span class="label">Anwalt</span></a>
+						<li><a href="https://www.anwalt.de/maria-susana-oder-pena" target="_blank"
+								class="icon solid alt fa-globe" title="Anwalt.de"><span class="label">Anwalt</span></a>
 						</li>
 						<li><a href="https://anwaltverein.de/" target="_blank" class="icon solid alt fa-link"
-								title="Anwaltverein.de"><span class="label">Anwaltverein</span></a></li>
+								title="Anwaltverein.de"><span class="label">Anwaltverein</span></a></li><br>
 					</ul>
+				</section>
+				<section>
+
+					<a href="mailto:info@pena-abogados.com"><img title="Kontact, E-mail"
+							src="{{ url_for('static', filename='images/contact-susana.jpg') }}" alt=""></a>
 				</section>
 			</section>
 		</footer>
