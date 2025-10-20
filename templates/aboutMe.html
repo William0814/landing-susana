@@ -35,12 +35,12 @@
 		<!-- Nav -->
 		<nav id="nav">
 			<ul class="links">
-				<li><a href="{{url_for('home')}}" data-i18n="menu-home">Startseite</a></li>
-				<li><a href="{{url_for('firma')}}" data-i18n="menu-home-firma">Die Kanzlei</a></li>
-				<li><a href="{{url_for('services')}}" data-i18n="menu-home-services">Dienstleistungen</a></li>
-				<li class="active"><a href="{{ url_for('about_me')}}" data-i18n="menu-home-aboutMe">über mich</a></li>
-				<li><a href="{{ url_for('impresum')}}" data-i18n="menu-home-impresum">Impressum</a></li>
-				<li><a href="{{ url_for('privacy')}}" data-i18n="menu-home-privacy">Datenschutz</a></li>
+				<li><a href="{{url_for('home')}}" data-i18n="menu-home"></a></li>
+				<li><a href="{{url_for('firma')}}" data-i18n="menu-home-firma"></a></li>
+				<li><a href="{{url_for('services')}}" data-i18n="menu-home-services"></a></li>
+				<li class="active"><a href="{{ url_for('about_me')}}" data-i18n="menu-home-aboutMe"></a></li>
+				<li><a href="{{ url_for('impresum')}}" data-i18n="menu-home-impresum"></a></li>
+				<li><a href="{{ url_for('privacy')}}" data-i18n="menu-home-privacy"></a></li>
 			</ul>
 		</nav>
 
@@ -52,7 +52,8 @@
 					<h2 data-i18n="about-title">Wer bin ich?</h2>
 				</header>
 				<hr />
-				<h4>Dr. María Susana Oder- Peña, LL.M.</h4>
+				<h3>Dr. JUR. María Susana Oder- Peña, LL.M.</h3>
+				<h5 data-i18n="aboutme-lawyer"></h5>
 				<p style="color: black;"><span class="image left"><img
 							src="{{ url_for('static', filename='images/susana.jpg') }}" alt="" /></span>
 					<span data-i18n="about-susana">Ich bin (als Rechtsanwältin) in Spanien, Kolumbien und Deutschland
