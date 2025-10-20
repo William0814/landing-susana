@@ -91,7 +91,7 @@ def services():
     lang = request.args.get('lang', 'de-DE')
     return render_template('services.html', current_year=current_year, **tolgee.get_translation(lang))
 
-@app.route("/inhaberin")
+@app.route("/ansprechpartnerin")
 def about_me():
     lang = request.args.get('lang', 'de-DE')
     return render_template('aboutMe.html', current_year=current_year,  **tolgee.get_translation(lang))
