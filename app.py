@@ -81,27 +81,27 @@ def home():
     sleep(4)
     return render_template('index.html', current_year=current_year, **context)
 
-@app.route('/firma')
+@app.route('/die-kanzlei')
 def firma():
     lang = request.args.get('lang', 'de-DE')
     return render_template('firma.html', current_year=current_year, **tolgee.get_translation(lang))
 
-@app.route('/services')
+@app.route('/dienstleistungen')
 def services():
     lang = request.args.get('lang', 'de-DE')
     return render_template('services.html', current_year=current_year, **tolgee.get_translation(lang))
 
-@app.route("/about-me")
+@app.route("/inhaberin")
 def about_me():
     lang = request.args.get('lang', 'de-DE')
     return render_template('aboutMe.html', current_year=current_year,  **tolgee.get_translation(lang))
 
-@app.route("/impresum")
+@app.route("/impresumm")
 def impresum():
     lang = request.args.get('lang', 'de-DE')
     return render_template('impresum.html', current_year=current_year, **tolgee.get_translation(lang))
 
-@app.route("/privacy")
+@app.route("/datenschutzerklaerung")
 def privacy():
     lang = request.args.get('lang', 'de-DE')
     return render_template('privacy.html', current_year=current_year, **tolgee.get_translation(lang))
