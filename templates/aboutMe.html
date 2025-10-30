@@ -15,7 +15,7 @@
 	<link rel="icon" type="image/png" sizes="16x16"
 		href="{{ url_for('static', filename='assets/favicon_susana/favicon-16x16.png') }}" />
 	<link rel="manifest" href="{{ url_for( 'static', filename='assets/json/site.webmanifest' )}}" />
-
+	<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/transition.css') }}" />
 	<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}" />
 	<noscript>
 		<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/noscript.css') }}" />
@@ -24,7 +24,7 @@
 
 <body class="is-preload">
 	<!-- Wrapper -->
-	<div id="wrapper">
+	<div id="wrapper" class="fade-in">
 
 		<!-- Header -->
 		<header id="header">
@@ -211,6 +211,7 @@
 	<script src="{{ url_for('static', filename='assets/js/breakpoints.min.js') }}"></script>
 	<script src="{{ url_for('static', filename='assets/js/util.js') }}"></script>
 	<script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
+	<script src="{{ url_for('static', filename='assets/js/drop-in.js') }}"></script>
 
 </body>
 

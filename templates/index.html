@@ -15,7 +15,7 @@
 	<link rel="icon" type="image/png" sizes="16x16"
 		href="{{ url_for('static', filename='assets/favicon_susana/favicon-16x16.png') }}" />
 	<link rel="manifest" href="{{ url_for( 'static', filename='assets/json/site.webmanifest' )}}" />
-
+	<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/transition.css') }}" />
 	<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}" />
 	<noscript>
 		<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/noscript.css') }}" />
@@ -76,16 +76,33 @@
 					<h3 data-i18n="home-address">auf den Seiten der Kanzlei Dr. Susana Peña</h3>
 					<h5 data-i18n="home-familie" style="color: black;"></h5>
 					<p data-i18n="home-welcome-p" style="color: black;"></p>
-
 					<p style="color: black;" data-i18n="home-write-p"></p>
 					<p><a href="mailto:info@pena-abogados.com ">info@pena-abogados.com</a></p>
 					<p><a href="#contact" data-i18n="contact-home-here"></a></p>
 					<a href="{{ url_for('about_me') }}" class="image main"><img
 							src="{{ url_for('static', filename='images/susana.png') }}" alt="" /></a>
+
 					<p><a href="https://maps.app.goo.gl/RXkbSbY74AHCimdq7" target="_blank"
-							data-i18n="how-arrive"></a></b></p>
+							data-i18n="how-arrive"></a></b>
+					</p>
+					<hr />
+
+					<header style="text-align: center;">
+						<h3>
+							Aktuelle Nachrichten
+						</h3>
+						<p style="color: black; text-align: center;">
+							Hier finden Sie aktuelle Nachrichten und Artikel, alle Urheberrechte sind vorbehalten.
+						</p>
+						<ul class="actions special">
+							<li><a href="https://nachricht.pena-abogados.com" class="button large"
+									target="_blank">Links</a>
+							</li>
+						</ul>
+					</header>
 				</header>
 			</article>
+
 			<!-- Posts -->
 		</div>
 		<!-- Footer -->
@@ -228,6 +245,7 @@
 	<script src="{{ url_for_lang('static', filename='assets/js/breakpoints.min.js') }}"></script>
 	<script src="{{ url_for_lang('static', filename='assets/js/util.js') }}"></script>
 	<script src="{{ url_for_lang('static', filename='assets/js/main.js') }}"></script>
+	<script src="{{ url_for_lang('static', filename='assets/js/drop-in.js') }}"></script>
 
 </body>
 
